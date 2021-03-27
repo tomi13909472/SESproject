@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "sonny",
+      "password": "hello"
+    },
+    {
+      "email": "sonny",
+      "password": "hi",
+      "id": "AQ25EZg"
+    },
+    {
+      "email": "sonny",
+      "password": " hi",
+      "id": "9dz4Vue"
+    },
+    {
+      "email": "hisir",
+      "password": "there",
+      "id": "HwdXPLw"
+    },
+    {
+      "email": "sonny",
+      "password": "yes",
+      "id": "FUe1naY"
+    }
+  ]
+}
