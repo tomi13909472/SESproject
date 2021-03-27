@@ -1,11 +1,14 @@
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 const register = ({ users }) => {
     const [show, setShow] = useState(false)
-    let cont = true
+    const router = useRouter()
+
     async function onSubmit(event) {
         event.preventDefault()
 
+        let cont = true
         const email = event.target.email.value
         const password = event.target.pwd.value
 
@@ -30,6 +33,10 @@ const register = ({ users }) => {
                 }
             )
             const result = await res.json()
+            cont = true
+            localStorage.setItem("email", email)
+            router.push("/home")
+
         }
     }
 
