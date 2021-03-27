@@ -9,11 +9,11 @@ const Home = () => {
 
 
     useEffect(() => {
-        const foundEmail = localStorage.getItem("email")
+        const foundEmail = localStorage.getItem("name")
         if(!foundEmail) {
             router.push("/")
         }
-        setEmail(localStorage.getItem("email"))
+        setEmail(localStorage.getItem("name"))
     })
 
 

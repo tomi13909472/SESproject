@@ -9,13 +9,21 @@ const register = ({ users }) => {
         event.preventDefault()
 
         let cont = true
+        let staff = false
+        const name = event.target.name.value
         const email = event.target.email.value
+        const phone = event.target.phone.value
         const password = event.target.pwd.value
+        const passcode = event.target.psc.value
+
+        if (passcode == "1234")
+            staff = true;
 
         for (const user of users) {
             if (user.email == email) {
                 setShow(true)
                 cont = false
+                break
             }
         }
         if (cont) {
@@ -24,8 +32,11 @@ const register = ({ users }) => {
                 {
                     method: 'POST',
                     body: JSON.stringify({
+                        name: name,
                         email: email,
-                        password: password
+                        phone: phone,
+                        password: password,
+                        staff: staff
                     }),
                     headers: {
                         'Content-Type': 'application/json'
@@ -34,7 +45,7 @@ const register = ({ users }) => {
             )
             const result = await res.json()
             cont = true
-            localStorage.setItem("email", email)
+            localStorage.setItem("name", name)
             router.push("/home")
 
         }
@@ -48,12 +59,24 @@ const register = ({ users }) => {
                 <table>
                     <tbody>
                         <tr>
+                            <td><label htmlFor="name">Name:</label></td>
+                            <td><input type="text" name="name" id="name"/></td>
+                        </tr>
+                        <tr>
                             <td><label htmlFor="email">Email:</label></td>
-                            <td><input type="text" id="email" name="email"></input></td>
+                            <td><input type="email" id="email" name="email"></input></td>
+                        </tr>
+                        <tr>
+                            <td><label htmlFor="phone">Phone:</label></td>
+                            <td><input type="tel" name="phone" id="phone"/></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="pwd">Password:</label></td>
                             <td><input type="password" id="pwd" name="pwd"></input></td>
+                        </tr>
+                        <tr>
+                            <td><label htmlFor="psc">Passcode (for staff):</label></td>
+                            <td><input type="password" name="psc" id="psc" maxlength="4"/></td>
                         </tr>
                     </tbody>
                 </table>

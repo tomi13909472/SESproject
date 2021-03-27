@@ -2,23 +2,11 @@
   "users": [
     {
       "id": "1",
-      "email": "sonny",
-      "password": "hello"
-    },
-    {
-      "email": "son",
-      "password": "hi",
-      "id": "zX0uCEC"
-    },
-    {
-      "email": "jared",
-      "password": "hi",
-      "id": "-Zxj48u"
-    },
-    {
-      "email": "tomi",
-      "password": "yes",
-      "id": "OXlRYCC"
+      "name": "sonny",
+      "email": "sonny@gmail.com",
+      "phone": "",
+      "password": "sonnypwd",
+      "staff": "false"
     }
   ]
 }

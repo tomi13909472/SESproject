@@ -5,7 +5,8 @@ export default function Home({ users }) {
   return (
 
     <div>
-      <Link href='/register'>Register</Link>
+      <Link href='/register'><a>Register</a></Link><br/>
+      <Link href='/login'><a>Login</a></Link>
       <ul>{users.map((user) => (
         <li key={user.email}>{user.email}</li>
       ))}</ul>
