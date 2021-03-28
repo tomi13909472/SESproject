@@ -24,6 +24,7 @@ const login = ({ users }) => {
         }
         if (cont){
             localStorage.setItem("name", name)
+            localStorage.setItem("email", email)
             router.push('/home')
         }
         else {

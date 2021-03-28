@@ -1,27 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-
+import Navi from '../components/Nav'
 
 const Home = () => {
-    const [email, setEmail] = useState()
-    const router = useRouter()
-
-
+    const [name, setName] = useState()
 
     useEffect(() => {
-        const foundEmail = localStorage.getItem("name")
-        if(!foundEmail) {
-            router.push("/")
-        }
-        setEmail(localStorage.getItem("name"))
+        setName(localStorage.getItem("name"))
     })
-
 
 
     return (
         <div>
+            <Navi></Navi>
             <h1>Welcome</h1>
-            <p>{email}</p>
+            <p>{name}</p>
         </div>
     )
 }

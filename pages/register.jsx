@@ -43,9 +43,11 @@ const register = ({ users }) => {
                     }
                 }
             )
-            const result = await res.json()
+            const req = await fetch(`http://localhost:5000/users?email=${email}`)
+            const user = await req.json()
             cont = true
             localStorage.setItem("name", name)
+            localStorage.setItem("email", email)
             router.push("/home")
 
         }
@@ -76,7 +78,7 @@ const register = ({ users }) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="psc">Passcode (for staff):</label></td>
-                            <td><input type="password" name="psc" id="psc" maxlength="4"/></td>
+                            <td><input type="password" name="psc" id="psc" maxLength="4"/></td>
                         </tr>
                     </tbody>
                 </table>

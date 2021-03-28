@@ -6,7 +6,31 @@
       "email": "sonny@gmail.com",
       "phone": "",
       "password": "sonnypwd",
-      "staff": "false"
+      "staff": false
+    },
+    {
+      "name": "no",
+      "email": "no@no",
+      "phone": "54327819",
+      "password": "no",
+      "staff": false,
+      "id": "zDMzHdC"
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "phone": "65789",
+      "password": "hi",
+      "staff": false,
+      "id": "gpjxscU"
+    },
+    {
+      "name": "yo",
+      "email": "yo@yo",
+      "phone": "57897",
+      "password": "yo",
+      "staff": false,
+      "id": "lHNl6_b"
     }
   ]
 }
