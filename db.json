@@ -1,22 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "sonny",
-      "email": "sonny@gmail.com",
-      "phone": "",
-      "password": "sonnypwd",
-      "staff": false
-    },
-    {
-      "name": "no",
-      "email": "no@no",
-      "phone": "54327819",
-      "password": "no",
-      "staff": false,
-      "id": "zDMzHdC"
-    },
-    {
       "name": "hi",
       "email": "hi@hi",
       "phone": "65789",
@@ -31,6 +15,22 @@
       "password": "yo",
       "staff": false,
       "id": "lHNl6_b"
+    },
+    {
+      "name": "sheritt",
+      "email": "sheritt@hi",
+      "phone": "666",
+      "password": "tom",
+      "staff": false,
+      "id": "lEoB2_1"
+    },
+    {
+      "name": "tomi",
+      "email": "tomi@hi",
+      "phone": "5655",
+      "password": "hi",
+      "staff": false,
+      "id": "wCTPJBK"
     }
   ]
 }

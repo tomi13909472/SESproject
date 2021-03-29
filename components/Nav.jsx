@@ -3,6 +3,8 @@ import { Component } from 'react'
 
 const Nav = () => {    
     const router = useRouter()
+    if (localStorage.getItem("email") == null)
+        router.push('/')
     const logout = () => {
         localStorage.removeItem("name")
         localStorage.removeItem("email")
@@ -14,11 +16,6 @@ const Nav = () => {
             <button style={{float: "right"}} onClick={logout}>Logout</button>
         </nav>
     )
-}
-
-export async function getStaticProps() {
-    if (localStorage.getItem("email") == null)
-        router.push('/')
 }
 
 export default Nav
