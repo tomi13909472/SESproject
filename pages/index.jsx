@@ -4,7 +4,7 @@ export default function Home({ users }) {
 
   return (
 
-    <div>
+    <div className='index'>
       <Link href='/register'><a>Register</a></Link><br/>
       <Link href='/login'><a>Login</a></Link>
       <ul>{users.map((user) => (

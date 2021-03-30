@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-
+import styles from '../styles/register.module.css'
 const register = ({ users }) => {
     const [show, setShow] = useState(false)
     const router = useRouter()
@@ -54,27 +54,27 @@ const register = ({ users }) => {
     }
 
     return (
-        <div>
-            <h1>Registration</h1>
+        <div className={styles.register}>
             {show ? <p>Account already exists</p> : null}
-            <form onSubmit={onSubmit}>
+            <form className={styles.registerform} onSubmit={onSubmit}>
+            <h1>Registration</h1>
                 <table>
                     <tbody>
                         <tr>
                             <td><label htmlFor="name">Name:</label></td>
-                            <td><input type="text" name="name" id="name"/></td>
+                            <td><input required type="text" name="name" id="name"/></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="email">Email:</label></td>
-                            <td><input type="email" id="email" name="email"></input></td>
+                            <td><input required type="email" id="email" name="email"></input></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="phone">Phone:</label></td>
-                            <td><input type="tel" name="phone" id="phone"/></td>
+                            <td><input required type="tel" name="phone" id="phone"/></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="pwd">Password:</label></td>
-                            <td><input type="password" id="pwd" name="pwd"></input></td>
+                            <td><input required type="password" id="pwd" name="pwd"></input></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="psc">Passcode (for staff):</label></td>

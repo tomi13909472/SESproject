@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { Component } from 'react'
-
+import styles from '../styles/nav.module.css'
 const Nav = () => {    
     const router = useRouter()
     if (localStorage.getItem("email") == null)
@@ -13,7 +13,7 @@ const Nav = () => {
 
     return (
         <nav>
-            <button style={{float: "right"}} onClick={logout}>Logout</button>
+            <button className={styles.btn} onClick={logout}>Logout</button>
         </nav>
     )
 }
