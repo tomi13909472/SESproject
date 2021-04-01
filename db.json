@@ -6,7 +6,7 @@
       "phone": "65789",
       "password": "hi",
       "staff": false,
-      "id": "gpjxscU"
+      "id": "1"
     },
     {
       "name": "yo",
@@ -14,23 +14,15 @@
       "phone": "57897",
       "password": "yo",
       "staff": false,
-      "id": "lHNl6_b"
+      "id": "2"
     },
     {
-      "name": "sheritt",
-      "email": "sheritt@hi",
-      "phone": "666",
-      "password": "tom",
+      "name": "bh",
+      "email": "bh@bh",
+      "phone": "",
+      "password": "bh",
       "staff": false,
-      "id": "lEoB2_1"
-    },
-    {
-      "name": "tomi",
-      "email": "tomi@hi",
-      "phone": "5655",
-      "password": "hi",
-      "staff": false,
-      "id": "wCTPJBK"
+      "id": "txRC8Ji"
     }
   ]
 }

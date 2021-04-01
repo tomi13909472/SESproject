@@ -43,12 +43,12 @@ const register = ({ users }) => {
                     }
                 }
             )
-            const req = await fetch(`http://localhost:5000/users?email=${email}`)
-            const user = await req.json()
             cont = true
-            localStorage.setItem("name", name)
-            localStorage.setItem("email", email)
-            router.push("/home")
+            if (res.status == 201) {
+                localStorage.setItem("name", name)
+                localStorage.setItem("email", email)
+                router.push("/home")
+            }
 
         }
     }
@@ -62,7 +62,7 @@ const register = ({ users }) => {
                     <tbody>
                         <tr>
                             <td><label htmlFor="name">Name:</label></td>
-                            <td><input type="text" name="name" id="name"/></td>
+                            <td><input type="text" name="name" id="name" /></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="email">Email:</label></td>
@@ -70,7 +70,7 @@ const register = ({ users }) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="phone">Phone:</label></td>
-                            <td><input type="tel" name="phone" id="phone"/></td>
+                            <td><input type="tel" name="phone" id="phone" /></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="pwd">Password:</label></td>
@@ -78,7 +78,7 @@ const register = ({ users }) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="psc">Passcode (for staff):</label></td>
-                            <td><input type="password" name="psc" id="psc" maxLength="4"/></td>
+                            <td><input type="password" name="psc" id="psc" maxLength="4" /></td>
                         </tr>
                     </tbody>
                 </table>
