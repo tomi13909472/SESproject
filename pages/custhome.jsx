@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Navi from '../components/Nav'
+import Navi from '../components/Custnav'
 
 const Home = ({ users }) => {
     const [name, setName] = useState()
@@ -14,7 +14,6 @@ const Home = ({ users }) => {
             }
         }
     })
-
 
     return (
         <div>

@@ -10,7 +10,7 @@ const login = ({ users }) => {
         event.preventDefault()
 
         let cont = false
-        let name
+        let name, id, staff
         const email = event.target.email.value
         const password = event.target.pwd.value
 
@@ -18,6 +18,7 @@ const login = ({ users }) => {
             if (email == user.email){
                 if (password == user.password){
                     name = user.name
+                    staff = user.staff
                     cont = true;
                 }
             }
@@ -25,7 +26,9 @@ const login = ({ users }) => {
         if (cont){
             localStorage.setItem("name", name)
             localStorage.setItem("email", email)
-            router.push('/home')
+            localStorage.setItem("id", id)
+            if (staff) router.push('/staffhome')
+            else router.push('/home')
         }
         else {
             setShow(true)

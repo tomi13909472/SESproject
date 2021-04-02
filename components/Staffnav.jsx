@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { Component } from 'react'
+import Link from 'next/link'
 
 const Nav = () => {    
     const router = useRouter()
@@ -17,6 +17,7 @@ const Nav = () => {
 
     return (
         <nav>
+            <Link href="mtnstaff"><a>Maintain staff</a></Link>
             <button style={{float: "right"}} onClick={logout}>Logout</button>
         </nav>
     )

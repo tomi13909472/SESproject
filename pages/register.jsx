@@ -43,11 +43,11 @@ const register = ({ users }) => {
                     }
                 }
             )
-            cont = true
             if (res.status == 201) {
                 localStorage.setItem("name", name)
                 localStorage.setItem("email", email)
-                router.push("/home")
+                if (staff) router.push("/staffhome")
+                else router.push("/home")
             }
 
         }
