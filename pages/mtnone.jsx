@@ -5,17 +5,18 @@ import router from 'next/router'
 
 const mtnone = ({ users }) => {
 
-    const [id, setId] = useState()
+    const [mid, setId] = useState()
     const [member, setMember] = useState()
     const [show, setShow] = useState(false)
     const [confirm, setConfirm] = useState(false)
+    const [warn, setWarn] = useState(false)
     let search = true
 
     useEffect(() => {
         setId(localStorage.getItem("mtnID"))
         if (search) {
             for (const user of users) {
-                if (id == user.id) {
+                if (mid == user.id) {
                     setMember(user)
                     console.log(user)
                     search = false
@@ -44,7 +45,7 @@ const mtnone = ({ users }) => {
         else nPwd = pwd
 
         const res = await fetch(
-            `http://localhost:5000/users/${localStorage.getItem("id")}`,
+            `http://localhost:5000/users/${mid}`,
             {
                 method: 'PUT',
                 body: JSON.stringify({
@@ -60,6 +61,7 @@ const mtnone = ({ users }) => {
             }
         )
         if (res.status == 200) {
+            localStorage.removeItem("mtnID")
             router.push('/mtnstaff')
         }
         else {
@@ -70,16 +72,27 @@ const mtnone = ({ users }) => {
 
     const del = (event) => {
         event.preventDefault()
-        setConfirm(true)
-        console.log("hi")
+        if (mid == localStorage.getItem("id"))
+            setWarn(true)
+        else
+            setConfirm(true)
     }
 
     const noDel = () => {
         setConfirm(false)
     }
 
-    const yesDel = () => {
-
+    const yesDel = async () => {
+        setConfirm(false)
+        const res = await fetch(
+            `http://localhost:5000/users/${mid}`,
+            {
+                method: 'DELETE'
+            }
+        )
+        if (res.status == 200)
+        router.push('/mtnstaff')
+        else setShow(true)
     }
 
     const cancel = (event) => {
@@ -90,14 +103,25 @@ const mtnone = ({ users }) => {
     return (
         <div>
             <h1>Maintain staff member</h1>
+            {show ? <p>Something went wrong or no values were entered</p> : null}
+            {warn ? <p>You cannot delete the account being currently used</p> : null}
             {confirm ?
-                <div style={{ zIndex: "10", border: "2px solid black" }}>
-                    <p>Are you sure you want to delete this member?</p>
-                    <button onClick={yesDel}>Yes</button>
-                    <button onClick={noDel}>No</button>
+                <div>
+                    <div style={{
+                        zIndex: "1", border: "2px solid black",
+                        width: "400px", height: "100px",
+                        position: "absolute", backgroundColor: "white",
+                        left: "50%", top: "50%",
+                        marginTop: "-50px", marginLeft: "-200px"
+                    }}>
+                        <div style={{textAlign: "center"}}>
+                            <p>Are you sure you want to delete this member?</p>
+                            <button onClick={yesDel}>Yes</button>
+                            <button onClick={noDel}>No</button>
+                        </div>
+                    </div>
                 </div>
                 : null}
-            {show ? <p>Something went wrong</p> : null}
             {member ?
                 <form onSubmit={update}>
                     <table>
@@ -128,7 +152,7 @@ const mtnone = ({ users }) => {
                     <button onClick={del}>Delete</button>
                     <button onClick={cancel}>Cancel</button>
                 </form>
-                
+
                 : <p>Member not found</p>}
         </div>
     )
