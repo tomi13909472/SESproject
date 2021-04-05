@@ -24,7 +24,7 @@ const mtnstaff = ({ users }) => {
                 </thead>
                 <tbody>
                     {list.map((user) => (
-                        <tr key={user.id}><td>{user.id}</td><td>{user.name}</td>
+                        <tr key={user.id}><td>{user.name}</td>
                             <td>{user.email}</td><td>{user.phone}</td>
                             <td><button onClick={() => manage(user.id)}>Manage</button></td></tr>
                     ))}

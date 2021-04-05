@@ -133,10 +133,6 @@ const mtnone = ({ users }) => {
                     <table>
                         <tbody>
                             <tr>
-                                <td><label htmlFor="id">ID:</label></td>
-                                <td><input type="text" name="id" id="id" readOnly placeholder={member.id} /></td>
-                            </tr>
-                            <tr>
                                 <td><label htmlFor="name">Name:</label></td>
                                 <td><input type="text" name="name" id="name" placeholder={member.name} /></td>
                             </tr>
