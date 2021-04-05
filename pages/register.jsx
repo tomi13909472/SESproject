@@ -44,8 +44,8 @@ const register = ({ users }) => {
                 }
             )
             if (res.status == 201) {
-                localStorage.setItem("name", name)
-                localStorage.setItem("email", email)
+                sessionStorage.setItem("name", name)
+                sessionStorage.setItem("email", email)
                 if (staff) router.push("/staffhome")
                 else router.push("/home")
             }

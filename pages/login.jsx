@@ -24,9 +24,9 @@ const login = ({ users }) => {
             }
         }
         if (cont){
-            localStorage.setItem("name", name)
-            localStorage.setItem("email", email)
-            localStorage.setItem("id", id)
+            sessionStorage.setItem("name", name)
+            sessionStorage.setItem("email", email)
+            sessionStorage.setItem("id", id)
             if (staff) router.push('/staffhome')
             else router.push('/home')
         }

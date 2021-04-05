@@ -39,6 +39,14 @@
       "password": "en",
       "staff": true,
       "id": "mG5sWlG"
+    },
+    {
+      "name": "bo",
+      "email": "bo@bo",
+      "phone": "76",
+      "password": "bo",
+      "staff": true,
+      "id": "69tnKQ4"
     }
   ]
 }

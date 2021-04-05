@@ -1,4 +1,5 @@
 import router from 'next/router'
+import Navi from '../components/Staffnav'
 
 const mtnstaff = ({ users }) => {
 
@@ -9,12 +10,13 @@ const mtnstaff = ({ users }) => {
     }
 
     function manage (id) {
-        localStorage.setItem("mtnID", id)
+        sessionStorage.setItem("mtnID", id)
         router.push('/mtnone')
     }
 
     return (
         <div>
+            <Navi></Navi>
             <h1>Maintain staff</h1>
             <table style={{ border: "1px solid black" }}>
                 <thead>

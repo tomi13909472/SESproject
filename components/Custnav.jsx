@@ -6,11 +6,11 @@ const Nav = () => {
     const[email, setEmail] = useState()
 
     useEffect(() => {
-        setEmail(localStorage.getItem("email"))
+        setEmail(sessionStorage.getItem("email"))
         if (email === null) router.push("/")
     })
     const logout = () => {
-        localStorage.clear()
+        sessionStorage.clear()
         router.push('/')
     }
 

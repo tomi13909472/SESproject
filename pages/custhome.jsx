@@ -6,11 +6,11 @@ const Home = ({ users }) => {
     const [name, setName] = useState()
     const [email, setEmail] = useState()
     useEffect(() => {
-        setName(localStorage.getItem("name"))
-        setEmail(localStorage.getItem("email"))
+        setName(sessionStorage.getItem("name"))
+        setEmail(sessionStorage.getItem("email"))
         for (const user of users){
             if (user.email == email){
-                localStorage.setItem("id", user.id)
+                sessionStorage.setItem("id", user.id)
             }
         }
     })

@@ -7,17 +7,17 @@ const Nav = () => {
     const[email, setEmail] = useState()
 
     useEffect(() => {
-        setEmail(localStorage.getItem("email"))
+        setEmail(sessionStorage.getItem("email"))
         if (email === null) router.push("/")
     })
     const logout = () => {
-        localStorage.clear()
+        sessionStorage.clear()
         router.push('/')
     }
 
     return (
         <nav>
-            <Link href="mtnstaff"><a>Maintain staff</a></Link>
+            <Link href="/mtnstaff"><a>Maintain staff</a></Link>
             <button style={{float: "right"}} onClick={logout}>Logout</button>
         </nav>
     )
