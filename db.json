@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "phone": "65789",
+      "password": "hi",
+      "staff": false,
+      "id": "1"
+    },
+    {
+      "name": "yo",
+      "email": "yo@yo",
+      "phone": "57897",
+      "password": "yo",
+      "staff": false,
+      "id": "2"
+    },
+    {
+      "name": "bh",
+      "email": "bh@bh",
+      "phone": "",
+      "password": "bh",
+      "staff": false,
+      "id": "txRC8Ji"
+    },
+    {
+      "name": "hy",
+      "email": "hy@hy",
+      "phone": "",
+      "password": "hy",
+      "staff": false,
+      "id": "XYQTqaz"
+    },
+    {
+      "name": "bo",
+      "email": "bo@bo",
+      "phone": "76",
+      "password": "bo",
+      "staff": true,
+      "id": "69tnKQ4"
+    },
+    {
+      "name": "bn",
+      "email": "bn@bn",
+      "phone": "",
+      "password": "bn",
+      "staff": true,
+      "id": "RWANZcB"
+    },
+    {
+      "name": "gn",
+      "email": "gn@gn",
+      "phone": "57",
+      "password": "gn",
+      "staff": true,
+      "id": "Kk1WseD"
+    }
+  ],
+  "passcode": [
+    {
+      "code": "1234"
+    }
+  ]
+}

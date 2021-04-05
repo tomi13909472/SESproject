@@ -1,13 +1,17 @@
 import { useRouter } from 'next/router'
-import { Component } from 'react'
 import styles from '../styles/nav.module.css'
+import { useState, useEffect } from 'react'
+
 const Nav = () => {    
     const router = useRouter()
-    if (localStorage.getItem("email") == null)
-        router.push('/')
+    const[email, setEmail] = useState()
+
+    useEffect(() => {
+        setEmail(sessionStorage.getItem("email"))
+        if (email === null) router.push("/")
+    })
     const logout = () => {
-        localStorage.removeItem("name")
-        localStorage.removeItem("email")
+        sessionStorage.clear()
         router.push('/')
     }
 

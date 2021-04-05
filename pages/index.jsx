@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function Home({ users }) {
-
+  
   return (
 
     <div className='index'>
@@ -13,6 +14,7 @@ export default function Home({ users }) {
     </div>
   )
 }
+
 
 export async function getStaticProps(){
   const res = await fetch(`http://localhost:5000/users`)
