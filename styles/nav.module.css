@@ -1,8 +1,8 @@
 .btn{
-    float: right;
-    background-color:grey;
-    color:white;
-  }
-  .btn:hover{
-    background: #2ecc71;
-  }
+  float: right;
+  background-color:grey;
+  color:white;
+}
+.btn:hover{
+  background: #2ecc71;
+}
