@@ -27,6 +27,7 @@
   color: white;
   border-radius: 24px;
   transition: 0.25s;
+  margin-bottom: 10px;
 }
 .registerform input[type="email"]:focus, .registerform input[type="password"]:focus, .registerform input[type="tel"]:focus, .registerform input[type="text"]:focus{
   width:280px;
