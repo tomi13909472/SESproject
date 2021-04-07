@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styles from '../styles/register.module.css'
-const register = ({ users }) => {
+const register = ({ users, code }) => {
     const [show, setShow] = useState(false)
     const router = useRouter()
+
 
     async function onSubmit(event) {
         event.preventDefault()
@@ -16,8 +17,10 @@ const register = ({ users }) => {
         const password = event.target.pwd.value
         const passcode = event.target.psc.value
 
-        if (passcode == "1234")
-            staff = true;
+
+
+        if (passcode == code)
+            staff = true
 
         for (const user of users) {
             if (user.email == email) {
@@ -43,12 +46,12 @@ const register = ({ users }) => {
                     }
                 }
             )
-            const req = await fetch(`http://localhost:5000/users?email=${email}`)
-            const user = await req.json()
-            cont = true
-            localStorage.setItem("name", name)
-            localStorage.setItem("email", email)
-            router.push("/home")
+            if (res.status == 201) {
+                sessionStorage.setItem("name", name)
+                sessionStorage.setItem("email", email)
+                if (staff) router.push("/staffhome")
+                else router.push("/home")
+            }
 
         }
     }
@@ -78,7 +81,7 @@ const register = ({ users }) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="psc">Passcode (for staff):</label></td>
-                            <td><input type="password" name="psc" id="psc" maxLength="4"/></td>
+                            <td><input type="password" name="psc" id="psc" maxLength="4" /></td>
                         </tr>
                     </tbody>
                 </table>
@@ -91,8 +94,12 @@ const register = ({ users }) => {
 export async function getStaticProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
+
+    const resp = await fetch(`http://localhost:5000/passcode`)
+    const passcode = await resp.json()
+    const code = passcode[0].code
     return {
-        props: { users },
+        props: { users, code },
     }
 }
 
