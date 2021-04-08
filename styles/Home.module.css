@@ -1,0 +1,11 @@
+.Homepage h1{
+    text-align: center;
+    font:30px;
+    color: white;
+  }
+  .Homepage p{
+    font-size: x-large;
+    font-display:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+  }

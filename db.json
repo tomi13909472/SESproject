@@ -6,7 +6,7 @@
       "phone": "65789",
       "password": "hi",
       "staff": false,
-      "id": "gpjxscU"
+      "id": "1"
     },
     {
       "name": "yo",
@@ -14,23 +14,52 @@
       "phone": "57897",
       "password": "yo",
       "staff": false,
-      "id": "lHNl6_b"
+      "id": "2"
     },
     {
-      "name": "sheritt",
-      "email": "sheritt@hi",
-      "phone": "666",
-      "password": "tom",
+      "name": "bh",
+      "email": "bh@bh",
+      "phone": "",
+      "password": "bh",
       "staff": false,
-      "id": "lEoB2_1"
+      "id": "txRC8Ji"
     },
     {
-      "name": "tomi",
-      "email": "tomi@hi",
-      "phone": "5655",
-      "password": "hi",
+      "name": "hy",
+      "email": "hy@hy",
+      "phone": "",
+      "password": "hy",
       "staff": false,
-      "id": "wCTPJBK"
+      "id": "XYQTqaz"
+    },
+    {
+      "name": "bo",
+      "email": "bo@bo",
+      "phone": "76",
+      "password": "bo",
+      "staff": true,
+      "id": "69tnKQ4"
+    },
+    {
+      "name": "bn",
+      "email": "bn@bn",
+      "phone": "",
+      "password": "bn",
+      "staff": true,
+      "id": "RWANZcB"
+    },
+    {
+      "name": "gn",
+      "email": "gn@gn",
+      "phone": "57",
+      "password": "gn",
+      "staff": true,
+      "id": "Kk1WseD"
+    }
+  ],
+  "passcode": [
+    {
+      "code": "1234"
     }
   ]
 }

@@ -1,16 +1,14 @@
 html,
 body {
-  padding: 0;
+  padding: 0px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:sans-serif;
+  background: url('../public/res2.jpg');
+  background-size: cover;
+  color: yellow;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }

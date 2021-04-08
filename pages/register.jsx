@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-
-const register = ({ users }) => {
+import styles from '../styles/register.module.css'
+const register = ({ users, code }) => {
     const [show, setShow] = useState(false)
     const router = useRouter()
+
 
     async function onSubmit(event) {
         event.preventDefault()
@@ -16,8 +17,10 @@ const register = ({ users }) => {
         const password = event.target.pwd.value
         const passcode = event.target.psc.value
 
-        if (passcode == "1234")
-            staff = true;
+
+
+        if (passcode == code)
+            staff = true
 
         for (const user of users) {
             if (user.email == email) {
@@ -43,42 +46,42 @@ const register = ({ users }) => {
                     }
                 }
             )
-            const req = await fetch(`http://localhost:5000/users?email=${email}`)
-            const user = await req.json()
-            cont = true
-            localStorage.setItem("name", name)
-            localStorage.setItem("email", email)
-            router.push("/home")
+            if (res.status == 201) {
+                sessionStorage.setItem("name", name)
+                sessionStorage.setItem("email", email)
+                if (staff) router.push("/staffhome")
+                else router.push("/home")
+            }
 
         }
     }
 
     return (
-        <div>
-            <h1>Registration</h1>
+        <div className={styles.register}>
             {show ? <p>Account already exists</p> : null}
-            <form onSubmit={onSubmit}>
+            <form className={styles.registerform} onSubmit={onSubmit}>
+            <h1>Registration</h1>
                 <table>
                     <tbody>
                         <tr>
                             <td><label htmlFor="name">Name:</label></td>
-                            <td><input type="text" name="name" id="name"/></td>
+                            <td><input required type="text" name="name" id="name"/></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="email">Email:</label></td>
-                            <td><input type="email" id="email" name="email"></input></td>
+                            <td><input required type="email" id="email" name="email"></input></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="phone">Phone:</label></td>
-                            <td><input type="tel" name="phone" id="phone"/></td>
+                            <td><input required type="tel" name="phone" id="phone"/></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="pwd">Password:</label></td>
-                            <td><input type="password" id="pwd" name="pwd"></input></td>
+                            <td><input required type="password" id="pwd" name="pwd"></input></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="psc">Passcode (for staff):</label></td>
-                            <td><input type="password" name="psc" id="psc" maxLength="4"/></td>
+                            <td><input type="password" name="psc" id="psc" maxLength="4" /></td>
                         </tr>
                     </tbody>
                 </table>
@@ -91,8 +94,12 @@ const register = ({ users }) => {
 export async function getStaticProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
+
+    const resp = await fetch(`http://localhost:5000/passcode`)
+    const passcode = await resp.json()
+    const code = passcode[0].code
     return {
-        props: { users },
+        props: { users, code },
     }
 }
 

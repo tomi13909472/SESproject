@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-
+import Image from 'next/image'
+import styles from '../styles/login.module.css'
 const login = ({ users }) => {
 
     const [show, setShow] = useState(false)
@@ -10,7 +11,7 @@ const login = ({ users }) => {
         event.preventDefault()
 
         let cont = false
-        let name
+        let name, id, staff
         const email = event.target.email.value
         const password = event.target.pwd.value
 
@@ -18,14 +19,17 @@ const login = ({ users }) => {
             if (email == user.email){
                 if (password == user.password){
                     name = user.name
+                    staff = user.staff
                     cont = true;
                 }
             }
         }
         if (cont){
-            localStorage.setItem("name", name)
-            localStorage.setItem("email", email)
-            router.push('/home')
+            sessionStorage.setItem("name", name)
+            sessionStorage.setItem("email", email)
+            sessionStorage.setItem("id", id)
+            if (staff) router.push('/staffhome')
+            else router.push('/home')
         }
         else {
             setShow(true)
@@ -35,25 +39,25 @@ const login = ({ users }) => {
     }
 
     return (
-        <div>
-            <h1>Login</h1>
-            {show ? <p>Incorrect credentials or account does not exist</p> : null}
-            <form onSubmit={check}>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><label htmlFor="email">Email:</label></td>
-                            <td><input type="email" name="email" id="email"/></td>
-                        </tr>
-                        <tr>
-                        <td><label htmlFor="pwd">Password:</label></td>
-                            <td><input type="password" name="pwd" id="pwd"/></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <input type="submit" value="Login"/>
-            </form>
-        </div>
+            <div className={styles.Login}>
+                {show ? <p>Incorrect credentials or account does not exist</p> : null}
+                <form className={styles.loginbox} onSubmit={check}>
+                    <h1>Login</h1>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label htmlFor="email">Email:</label></td>
+                                <td><input required type="email" name="email" id="email"/><div class={styles.hideE}>Enter your email.</div></td>
+                            </tr>
+                            <tr>
+                            <td><label htmlFor="pwd">Password:</label></td>
+                                <td><input required type="password" name="pwd" id="pwd"/><div class={styles.hideP}>Enter your password.</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" value="Login"/>
+                </form>
+            </div>
     )
 }
 
