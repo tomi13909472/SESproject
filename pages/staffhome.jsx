@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Navi from '../components/Staffnav'
-
+import styles from '../styles/Staffhome.module.css'
 const Staffhome = ({ users }) => {
     const [name, setName] = useState()
     const [email, setEmail] = useState()
@@ -16,7 +16,7 @@ const Staffhome = ({ users }) => {
     })
 
     return (
-        <div>
+        <div className={styles.Staffhome}>
             <Navi></Navi>
             <h1>Welcome</h1>
             <p>{name}</p>

@@ -16,8 +16,8 @@ const Nav = () => {
     }
 
     return (
-        <nav>
-            <button className={styles.btn} onClick={logout}>Logout</button>
+        <nav className={styles.cnav}>
+            <button className={styles.cbtn} onClick={logout}>Logout</button>
         </nav>
     )
 }

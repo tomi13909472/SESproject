@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import styles from '../styles/login.module.css'
+import styles from '../styles/Login.module.css'
 const login = ({ users }) => {
 
     const [show, setShow] = useState(false)

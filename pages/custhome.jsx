@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Navi from '../components/Custnav'
-
+import styles from '../styles/CustHome.module.css'
 const Home = ({ users }) => {
     const [name, setName] = useState()
     const [email, setEmail] = useState()
@@ -16,7 +16,7 @@ const Home = ({ users }) => {
     })
 
     return (
-        <div>
+        <div className={styles.CustHomepage}>
             <Navi></Navi>
             <h1>Welcome</h1>
             <p>{name}</p>
