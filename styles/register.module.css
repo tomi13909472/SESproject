@@ -1,6 +1,6 @@
 .registerform{
   width: 400px;
-  padding: 40px;
+  padding: 20px;
   position: absolute;
   top:50%;
   left:50%;
@@ -29,7 +29,7 @@
   color: white;
   border-radius: 24px;
   transition: 0.25s;
-  margin-bottom: 10px;
+  margin-bottom:0px;
 }
 .registerform input[type="email"]:focus, .registerform input[type="password"]:focus, .registerform input[type="tel"]:focus, .registerform input[type="text"]:focus{
   width:280px;
@@ -40,5 +40,19 @@
 }
 .registerform label{
   color: white;
+}
+.registerform input[type="submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border:2px solid #2ecc71;
+  padding:14px 40px;
+  outline:none;
+  color:white;
+  border-radius:24px;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
