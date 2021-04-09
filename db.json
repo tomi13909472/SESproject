@@ -31,6 +31,14 @@
       "password": "hi",
       "staff": false,
       "id": "wCTPJBK"
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "staff": false,
+      "id": "JsZo8iP"
     }
   ]
 }
