@@ -77,6 +77,10 @@ const register = ({ users }) => {
                             <td><input type="password" id="pwd" name="pwd"></input></td>
                         </tr>
                         <tr>
+                            <td><Label htmlFor="pwd2">Password:</Label></td>
+                            <td><Label type="password2" id="pwd2" name="pwd2"></Label></td>
+                        </tr>
+                        <tr>
                             <td><label htmlFor="psc">Passcode (for staff):</label></td>
                             <td><input type="password" name="psc" id="psc" maxLength="4"/></td>
                         </tr>
