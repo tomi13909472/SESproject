@@ -92,6 +92,17 @@ const register = ({ users }) => {
     )
 }
 
+function matchPassword() {  
+    var pwd = document.getElementById("password");  
+    var pwd2 = document.getElementById("password2");  
+    if(pwd != pwd2)  
+    {   
+      alert("Passwords did not match");  
+    } else {  
+      alert("Password created successfully");  
+    }  
+  }  
+
 export async function getStaticProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
