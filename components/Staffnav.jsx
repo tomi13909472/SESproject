@@ -17,7 +17,9 @@ const Nav = () => {
 
     return (
         <nav>
+            <Link href="/staffhome"><a>Home</a></Link>
             <Link href="/mtnstaff"><a>Maintain staff</a></Link>
+            <Link href="/mtnmenu"><a>Manage menu</a></Link>
             <button style={{float: "right"}} onClick={logout}>Logout</button>
         </nav>
     )

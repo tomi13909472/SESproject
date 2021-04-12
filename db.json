@@ -55,11 +55,29 @@
       "password": "gn",
       "staff": true,
       "id": "Kk1WseD"
+    },
+    {
+      "name": "sir",
+      "email": "sir@sir",
+      "phone": "86",
+      "password": "sir",
+      "staff": true,
+      "id": "QHtxoAs"
     }
   ],
   "passcode": [
     {
       "code": "1234"
+    }
+  ],
+  "dishes": [
+    {
+      "name": "gh",
+      "category": "Main",
+      "desc": "bhbhh",
+      "price": "20",
+      "photoName": "ERD.png",
+      "id": 4
     }
   ]
 }
