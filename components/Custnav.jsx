@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import styles from '../styles/nav.module.css'
 import { useState, useEffect } from 'react'
 
 const Nav = () => {    
@@ -17,7 +16,7 @@ const Nav = () => {
 
     return (
         <nav>
-            <button className={styles.btn} onClick={logout}>Logout</button>
+            <button style={{float: "right"}} onClick={logout}>Logout</button>
         </nav>
     )
 }
