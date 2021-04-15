@@ -49,7 +49,6 @@ const custBook = () => {
                 <input type="time" name="time" id="time" step="3600000" disabled onChange={onTimeChange} />
                 <input type="submit" value="Book" />
             </form>
-            {show ? <p>{name} and {email}</p> : null}
         </div>
     )
 }
