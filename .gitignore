@@ -4,11 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-<<<<<<< HEAD
 /db.json
-=======
-db.json
->>>>>>> 78e079458ea72d3f2afb7f4ce7ff8eb9a48c0ba4
 
 # testing
 /coverage
