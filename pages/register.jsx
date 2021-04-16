@@ -50,7 +50,7 @@ const register = ({ users, code }) => {
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
                 if (staff) router.push("/staffhome")
-                else router.push("/home")
+                else router.push("/custhome")
             }
 
         }

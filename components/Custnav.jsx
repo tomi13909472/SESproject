@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
-import styles from '../styles/nav.module.css'
+import styles from '../styles/Custnav.module.css'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 const Nav = () => {    
@@ -17,6 +18,8 @@ const Nav = () => {
 
     return (
         <nav className={styles.cnav}>
+            <Link href="/booktable"><a>Book Table</a></Link>
+            <Link href="/viewbookings"><a>View Bookings</a></Link>
             <button className={styles.cbtn} onClick={logout}>Logout</button>
         </nav>
     )

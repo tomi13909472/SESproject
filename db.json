@@ -55,11 +55,56 @@
       "password": "gn",
       "staff": true,
       "id": "Kk1WseD"
+    },
+    {
+      "name": "sujith",
+      "email": "sujith@gmail.com",
+      "phone": "12345",
+      "password": "123456",
+      "staff": false,
+      "id": "ra9WGOJ"
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "phone": "4575",
+      "password": "abcd",
+      "staff": false,
+      "id": "NCaZcZm"
     }
   ],
   "passcode": [
     {
       "code": "1234"
+    }
+  ],
+  "bookings": [
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-13",
+      "time": "11:30",
+      "table": "table 4",
+      "numberofpeople": "4",
+      "id": 8
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-18",
+      "time": "11:40",
+      "table": "table 5",
+      "numberofpeople": "4",
+      "id": 9
+    },
+    {
+      "name": "sujith",
+      "email": "sujith@gmail.com",
+      "date": "2021-04-17",
+      "time": "11:40",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "id": 10
     }
   ]
 }
