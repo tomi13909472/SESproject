@@ -1,22 +1,20 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 
 const booktable = ({ tableusers}) => {
     const router = useRouter()
     const [show, setShow] = useState(false)
-    const [warn, setwarn] = useState(false)
+    // const [warn, setwarn] = useState(false)
 
-    // var today=new Date();
-    // var dd = today.getDate();
-    // var mm = today.getMonth()+1; 
-    // var yyyy = today.getFullYear();
-    // if(dd<10){
-    //     dd='0'+dd
-    // } 
-    // if(mm<10){
-    //     mm='0'+mm
-    // } 
-    // today=yyyy+"-"+mm+"-"+dd;
+    useEffect(() => {
+        document.getElementById("date").setAttribute("min", MinDate())
+    })
+
+    function MinDate() {
+        var today_date = new Date()
+        today_date.setDate(today_date.getDate()+1)
+        return today_date.toISOString().slice(0, 10) //2013-03-10T02:00:00Z
+    }
 
     async function onSubmit(event) {
         event.preventDefault()
@@ -26,12 +24,11 @@ const booktable = ({ tableusers}) => {
         const time = event.target.time.value;
         const table=event.target.table.value;
         const persons=event.target.person.value;
-        // setShow(true) value={show ? <p>{Name}</p>:<p>***</p>} onSubmit={onSubmit} 
-        //{warn ? <p>cannot select this date</p>: null}
 
         for (const user of tableusers) {
-            if (user.time == time && user.date == date) {
-                if(user.table == table)
+            if (user.table == table && user.date == MDate) {
+                console.log("abcd1")
+                if(user.time == time)
                     setShow(true)
                     cont = false;
                     break
@@ -49,7 +46,8 @@ const booktable = ({ tableusers}) => {
                         date: MDate,
                         time: time,
                         table:table,
-                        numberofpeople: persons
+                        numberofpeople: persons,
+                        personId : sessionStorage.getItem("id")
                     }),
                     headers: {
                         'Content-Type': 'application/json'
