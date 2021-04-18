@@ -1,6 +1,6 @@
 import router from 'next/router'
 import Navi from '../components/Staffnav'
-import styles from '../styles/Mtnstaff.module.css'
+import styles from '../styles/mtnstaff.module.css'
 const mtnstaff = ({ users }) => {
 
     const list = new Array()
@@ -20,7 +20,7 @@ const mtnstaff = ({ users }) => {
             <h1>Maintain staff</h1>
             <table className={styles.mtntable}>
                 <thead>
-                    <tr><td>ID</td><td>Name</td><td>Email</td><td>Phone</td></tr>
+                    <tr><td>Name</td><td>Email</td><td>Phone</td><td></td></tr>
                 </thead>
                 <tbody>
                     {list.map((user) => (

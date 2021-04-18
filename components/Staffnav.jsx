@@ -17,7 +17,9 @@ const Nav = () => {
 
     return (
         <nav className={styles.snav}>
+            <Link href="/staffhome"><a>Home</a></Link>
             <Link href="/mtnstaff"><a>Maintain staff</a></Link>
+            <Link href="/mtnmenu"><a>Manage menu</a></Link>
             <button className={styles.sbtn} onClick={logout}>Logout</button>
         </nav>
     )

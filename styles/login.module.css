@@ -1,5 +1,5 @@
 .loginbox{
-  width: 400px;
+  width: 380px;
   padding: 40px;
   position: absolute;
   top:50%;
@@ -29,13 +29,11 @@
   border-radius: 24px;
   transition: 0.25s;
 }
-
 /*This gives the animation effect.*/
 .loginbox input[type="email"]:focus, .loginbox input[type="password"]:focus{
   width:280px;
   border-color: #2ecc71;
 }
-
 
 .loginbox input[type="submit"]{
   border:0;
@@ -77,4 +75,5 @@
 }
 .loginbox label{
   color: white;
+  padding-left: 14px;
 }

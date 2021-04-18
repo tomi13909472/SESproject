@@ -1,0 +1,96 @@
+.previousbooking {
+    border-collapse: collapse;/* reduces the space b/w the cells */
+    margin:25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 15);
+    margin-left: 10px;
+}
+.previousbooking thead tr{
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold; 
+}
+.previousbooking td{
+    padding: 12px 15px;
+}
+.previousbooking tbody tr{
+    border-bottom:1px solid #dddddd;
+}
+.previousbooking tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.previousbooking tbody tr:nth-of-type(odd){
+    background-color: #dddddd;
+}
+.previousbooking tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+.currentbooking {
+    border-collapse: collapse;/* reduces the space b/w the cells */
+    margin:25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 15);
+    margin-left: 10px;
+}
+.currentbooking thead tr{
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold; 
+}
+.currentbooking td{
+    padding: 12px 15px;
+}
+.currentbooking tbody tr{
+    border-bottom:1px solid #dddddd;
+}
+.currentbooking tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.currentbooking tbody tr:nth-of-type(odd){
+    background-color: #dddddd;
+}
+.currentbooking tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+.currentbooking button:hover{
+    background: #009879;
+}
+.bookings h3{
+    margin-left: 10px;
+}
+.popupvb{
+    z-index:1;
+    border:1px solid black;
+    border-radius: 5px;
+    width:400px; 
+    height:100px;
+    position:absolute;
+    background-color:#dddddd;
+    left:50%;
+    top: 50%;
+    margin-top:-35px;
+    margin-left: -100px;
+}
+.popuptextvb p{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.popuptextvb button{
+    margin-left: 100px;
+    padding-left: 10px;
+}
+.popuptextvb button:hover{
+    background-color: #2ecc71;
+}
+

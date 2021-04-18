@@ -71,6 +71,14 @@
       "password": "abcd",
       "staff": false,
       "id": "NCaZcZm"
+    },
+    {
+      "name": "sir",
+      "email": "sir@sir",
+      "phone": "86",
+      "password": "sir",
+      "staff": true,
+      "id": "QHtxoAs"
     }
   ],
   "passcode": [
@@ -128,6 +136,16 @@
       "numberofpeople": "1",
       "personId": "NCaZcZm",
       "id": 5
+    }
+  ],
+  "dishes": [
+    {
+      "name": "gh",
+      "category": "Main",
+      "desc": "bhbhh",
+      "price": "20",
+      "photoName": "ERD.png",
+      "id": 4
     }
   ]
 }

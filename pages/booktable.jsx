@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect} from 'react'
+import styles from '../styles/booktable.module.css'
+import Navi from '../components/Custnav'
 
 const booktable = ({ tableusers}) => {
     const router = useRouter()
@@ -74,10 +76,11 @@ const booktable = ({ tableusers}) => {
 
     return (
         <div className="container-form">
+            {/* <Navi></Navi> */}
             {show ? <p>table already occupied</p> : null}
-            <form onSubmit={onSubmit}>
+            <form className={styles.bookform} onSubmit={onSubmit}>
             <h1>Reservation online</h1>
-                <table>
+                <table className={styles.booktable}>
                     <tbody>
                         <tr>
                             <td><label htmlFor="Date">Date:</label></td>

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import styles from '../styles/Register.module.css'
+import styles from '../styles/register.module.css'
 const register = ({ users, code }) => {
     const [show, setShow] = useState(false)
     const router = useRouter()

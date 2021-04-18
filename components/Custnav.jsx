@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import styles from '../styles/Custnav.module.css'
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import styles from '../styles/custnav.module.css'
 
 const Nav = () => {    
     const router = useRouter()

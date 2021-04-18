@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import styles from '../styles/viewbookings.module.css'
 
 const viewbookings = ({bookingusers}) => {
     
@@ -50,26 +50,26 @@ const viewbookings = ({bookingusers}) => {
     }
 
     return (
-        <div>
+        <div className={styles.bookings}>
             <Link href="/custhome"><a>Back</a></Link>
             <h3>Previous Bookings</h3>
             {show ? <p>Something went wrong or no values were entered</p> : null}
-            <table>
+            <table className={styles.previousbooking}>
                 <thead>
                     <tr><td>Date</td><td>Time</td><td>Table</td><td>Number Of People</td></tr>
                 </thead>
-            </table>
             <tbody>
             {list.map((buser) => (
                         <tr key={buser.name}><td>{buser.date}</td>
                             <td>{buser.time}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td></tr>
             ))}
             </tbody>
+            </table>
             <h3>Current Bookings</h3>
             {Confirm ?  
                 <div>
-                    <div>
-                        <div>
+                    <div className={styles.popupvb}>
+                        <div className={styles.popuptextvb}>
                             <p>Are you sure you want to delete this member?</p>
                             <button onClick={yesCancel}>Yes</button>
                             <button onClick={noCancel}>No</button>
@@ -77,11 +77,10 @@ const viewbookings = ({bookingusers}) => {
                     </div>
                 </div>
                 : null}
-            <table>
+            <table className={styles.currentbooking}>
                 <thead>
-                    <tr><td>Date</td><td>Time</td><td>Table</td><td>Number Of People</td></tr>
+                    <tr><td>Date</td><td>Time</td><td>Table</td><td>Number Of People</td><td></td></tr>
                 </thead>
-            </table>
             <tbody>
             {list1.map((buser) => (
                         <tr key={buser.name}><td>{buser.date}</td>
@@ -89,6 +88,7 @@ const viewbookings = ({bookingusers}) => {
                             <td><button onClick={Cancel}>Cancel Booking</button></td></tr>
             ))}
             </tbody>
+            </table>
         </div>
     )
 }
