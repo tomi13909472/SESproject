@@ -1,0 +1,15 @@
+.sbtn{
+    float: right;
+    background-color:#dddddd;
+    color:black;
+    border-radius: 5px;
+    margin-right: 10px;
+    
+  }
+.sbtn:hover{
+    background: #2ecc71;
+}
+.snav a{
+    color: black;
+    background-color: #dddddd;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import router from 'next/router'
 import Navi from '../components/Staffnav'
-
+import styles from '../styles/mtnone.module.css'
 const mtnone = ({ users }) => {
 
     const [mid, setId] = useState()
@@ -106,21 +106,15 @@ const mtnone = ({ users }) => {
     }
 
     return (
-        <div>
+        <div className={styles.mtnone1}>
             <Navi></Navi>
             <h1>Maintain staff member</h1>
             {show ? <p>Something went wrong or no values were entered</p> : null}
             {warn ? <p>You cannot delete the account being currently used</p> : null} {/* Warning for deleting currently used account */}
             {confirm ?  //Warning for deleting user
                 <div>
-                    <div style={{
-                        zIndex: "1", border: "2px solid black",
-                        width: "400px", height: "100px",
-                        position: "absolute", backgroundColor: "white",
-                        left: "50%", top: "50%",
-                        marginTop: "-50px", marginLeft: "-200px"
-                    }}>
-                        <div style={{ textAlign: "center" }}>
+                    <div className={styles.popup}>
+                        <div className={styles.popuptext}>
                             <p>Are you sure you want to delete this member?</p>
                             <button onClick={yesDel}>Yes</button>
                             <button onClick={noDel}>No</button>
@@ -129,7 +123,7 @@ const mtnone = ({ users }) => {
                 </div>
                 : null}
             {member ?
-                <form onSubmit={update}>
+                <form className={styles.mtnoneform} onSubmit={update}>
                     <table>
                         <tbody>
                             <tr>

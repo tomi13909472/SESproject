@@ -43,7 +43,7 @@
     {
       "name": "bn",
       "email": "bn@bn",
-      "phone": "",
+      "phone": "456789",
       "password": "bn",
       "staff": true,
       "id": "RWANZcB"
@@ -63,11 +63,107 @@
       "password": "sir",
       "staff": true,
       "id": "QHtxoAs"
+    },
+    {
+      "name": "sujith",
+      "email": "sujith@gmail.com",
+      "phone": "12345",
+      "password": "123456",
+      "staff": false,
+      "id": "ra9WGOJ"
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "phone": "4575",
+      "password": "abcd",
+      "staff": false,
+      "id": "NCaZcZm"
+    },
+    {
+      "name": "Mitchel",
+      "email": "mitchel@gmail.com",
+      "phone": "788457",
+      "password": "abcdefgh",
+      "staff": false,
+      "id": "t9HsUXS"
     }
   ],
   "passcode": [
     {
       "code": "1234"
+    }
+  ],
+  "bookings": [
+    {
+      "name": "sujith",
+      "email": "sujith@gmail.com",
+      "date": "2021-04-19",
+      "time": "17:30",
+      "table": "table 3",
+      "numberofpeople": "1",
+      "personId": "ra9WGOJ",
+      "id": 1
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-18",
+      "time": "16:38",
+      "table": "table 5",
+      "numberofpeople": "2",
+      "personId": "NCaZcZm",
+      "id": 2
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-16",
+      "time": "23:00",
+      "table": "table 3",
+      "numberofpeople": "1",
+      "personId": "NCaZcZm",
+      "id": 4
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-19",
+      "time": "17:30",
+      "table": "table 4",
+      "numberofpeople": "1",
+      "personId": "NCaZcZm",
+      "id": 5
+    },
+    {
+      "name": "sujith",
+      "email": "sujith@gmail.com",
+      "date": "2021-04-20",
+      "time": "20:30",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "ra9WGOJ",
+      "id": 6
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-20",
+      "time": "20:24",
+      "table": "table 2",
+      "numberofpeople": "3",
+      "personId": "NCaZcZm",
+      "id": 7
+    },
+    {
+      "name": "abcd",
+      "email": "abcd@abcd",
+      "date": "2021-04-23",
+      "time": "11:00",
+      "table": "table 2",
+      "numberofpeople": "3",
+      "personId": "NCaZcZm",
+      "id": 8
     }
   ],
   "dishes": [

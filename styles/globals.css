@@ -3,9 +3,9 @@ body {
   padding: 0px;
   margin: 0;
   font-family:sans-serif;
-  background: url('../public/res2.jpg');
+  background: #191919;
   background-size: cover;
-  color: yellow;
+  color: white;
 }
 
 a {

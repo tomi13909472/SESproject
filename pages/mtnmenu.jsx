@@ -1,9 +1,10 @@
 import router from 'next/router'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Navi from '../components/Staffnav'
 import Image from 'next/image'
 import axios from 'axios'
+import Link from 'next/link'
+import styles from '../styles/mtnmenu.module.css'
 
 
 const mtnmenu = ({ dishes }) => {
@@ -89,16 +90,10 @@ const mtnmenu = ({ dishes }) => {
             <button onClick={add}>Add Dish</button>
             {addShow ?  //Warning for deleting user
                 <div>
-                    <div style={{
-                        zIndex: "1", border: "2px solid white",
-                        width: "600px", height: "300px",
-                        position: "absolute", backgroundColor: "black",
-                        left: "50%", top: "50%",
-                        marginTop: "-150px", marginLeft: "-300px"
-                    }}>
-                        <h2 style={{ textAlign: "center" }}>Add Dish</h2>
+                    <div className={styles.adddish}>
+                        <h2>Add Dish</h2>
                         <form onSubmit={addConf}>
-                            <table style={{ marginLeft: "auto", marginRight: "auto" }}>
+                            <table className={styles.adddishtable}>
                                 <tbody>
                                     <tr>
                                         <td><label htmlFor="name">Name:</label></td>
@@ -129,7 +124,7 @@ const mtnmenu = ({ dishes }) => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <div style={{ textAlign: "center" }}>
+                            <div className={styles.adddishsubmit}>
                                 <input type="submit" value="Add Dish" />
                                 <button onClick={cancel}>Cancel</button>
                             </div>
@@ -137,9 +132,9 @@ const mtnmenu = ({ dishes }) => {
                     </div>
                 </div>
                 : null}
-            <table style={{ border: "1px solid black" }}>
+            <table className={styles.mtnmenutable}>
                 <thead>
-                    <tr><td>Photo</td><td>Name</td><td>Category</td><td width="200">Description</td><td>Price</td></tr>
+                    <tr><td>Photo</td><td>Name</td><td>Category</td><td width="200">Description</td><td>Price</td><td></td></tr>
                 </thead>
                 <tbody>
                     {list.map((dish) => (

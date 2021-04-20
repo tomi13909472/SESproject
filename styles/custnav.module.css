@@ -1,0 +1,12 @@
+.cbtn{
+  float: right;
+  background-color:#dddddd;
+  color:black;
+}
+.cbtn:hover{
+  background: #2ecc71;
+}
+.cnav{
+  padding-top:1px;
+  justify-content: flex-end;
+}

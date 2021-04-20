@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import router from 'next/router'
 import Navi from '../components/Staffnav'
 import axios from 'axios'
+import styles from '../styles/mtndish.module.css'
 
 const mtndish = ({ dishes }) => {
     const [mid, setId] = useState()
@@ -122,20 +123,14 @@ const mtndish = ({ dishes }) => {
     }
 
     return (
-        <div>
+        <div className={styles.mtnd}>
             <Navi></Navi>
             <h1>Maintain dish</h1>
             {show ? <p>Something went wrong or no values were entered</p> : null}
             {confirm ?  //Warning for deleting dish
                 <div>
-                    <div style={{
-                        zIndex: "1", border: "2px solid black",
-                        width: "400px", height: "100px",
-                        position: "absolute", backgroundColor: "white",
-                        left: "50%", top: "50%",
-                        marginTop: "-50px", marginLeft: "-200px"
-                    }}>
-                        <div style={{ textAlign: "center" }}>
+                    <div className={styles.popupdish} >
+                        <div className={styles.popupdishtext} style={{ textAlign: "center" }}>
                             <p>Are you sure you want to delete this dish?</p>
                             <button onClick={yesDel}>Yes</button>
                             <button onClick={noDel}>No</button>
@@ -144,7 +139,7 @@ const mtndish = ({ dishes }) => {
                 </div>
                 : null}
             {dish ?
-                <form onSubmit={update}>
+                <form className={styles.mtndishform} onSubmit={update}>
                     <table>
                         <tbody>
                             <tr>
