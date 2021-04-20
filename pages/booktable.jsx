@@ -2,11 +2,14 @@ import { useRouter } from 'next/router'
 import { useState, useEffect} from 'react'
 import styles from '../styles/booktable.module.css'
 import Navi from '../components/Custnav'
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
+toast.configure()
 const booktable = ({ tableusers}) => {
     const router = useRouter()
     const [show, setShow] = useState(false)
-    // const [warn, setwarn] = useState(false)
+    // const [popup, setpopup] = useState(false)
 
     useEffect(() => {
         document.getElementById("date").setAttribute("min", MinDate())
@@ -14,8 +17,12 @@ const booktable = ({ tableusers}) => {
 
     function MinDate() {
         var today_date = new Date()
-        today_date.setDate(today_date.getDate()+1)
+        today_date.setDate(today_date.getDate())
         return today_date.toISOString().slice(0, 10) //2013-03-10T02:00:00Z
+    }
+
+    const notify =()=>{
+        toast.success('Booking Successful!',{ position:toast.POSITION.TOP_CENTER })
     }
 
     async function onSubmit(event) {
@@ -36,7 +43,6 @@ const booktable = ({ tableusers}) => {
                     break
             }
         }
-
         if (cont) {
             const res = await fetch(
                 `http://localhost:5000/bookings`,
@@ -66,18 +72,17 @@ const booktable = ({ tableusers}) => {
         }
 
     }
-    // const Warning= (event) => {
-    //     event.preventDefault()
-    //     if(today>date){
-    //         setwarn(true)
-    //     }
-    // }
 
 
     return (
         <div className="container-form">
-            {/* <Navi></Navi> */}
+            <Navi></Navi>
             {show ? <p>table already occupied</p> : null}
+            {/* {popup ? 
+            <div className="popup">
+                <p>Booking successful</p>
+                <button onClick={close}>close</button>
+            </div> : null } */}
             <form className={styles.bookform} onSubmit={onSubmit}>
             <h1>Reservation online</h1>
                 <table className={styles.booktable}>
@@ -92,7 +97,7 @@ const booktable = ({ tableusers}) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="table">Table:</label></td>
-                            <td><select name="table" id="table">
+                            <td><select required name="table" id="table">
                                 <option value="table-select">select table</option>
                                 <option value="table 1">table 1</option>
                                 <option value="table 2">table 2</option>
@@ -104,7 +109,7 @@ const booktable = ({ tableusers}) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="person">How many people:</label></td>
-                            <td><select name="person" id="person">
+                            <td><select required name="person" id="person">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -115,7 +120,7 @@ const booktable = ({ tableusers}) => {
                         </tr>
                     </tbody>
                 </table>
-                <input type="submit" value="Submit" />
+                <input onClick={notify} type="submit" value="Submit" />
             </form>
         </div>
     )

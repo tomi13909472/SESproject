@@ -1,5 +1,4 @@
 import router from 'next/router'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Navi from '../components/Staffnav'
 import Image from 'next/image'

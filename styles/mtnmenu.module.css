@@ -8,8 +8,8 @@
         background-color: #191919;
         left: 50%;
         top: 50%;
-        margin-top: -220px; 
-        margin-left: 150px;
+        margin: -220px auto;
+        margin-left:-120px ;
 }
 .adddish h2{
     text-align: center;

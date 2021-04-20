@@ -42,3 +42,6 @@
 .bookform input[type="submit"]:hover{
     background: #2ecc71;
 }
+.bookform select{
+    background: #191919;
+}

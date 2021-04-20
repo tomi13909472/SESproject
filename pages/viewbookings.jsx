@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import router from 'next/router'
 import styles from '../styles/viewbookings.module.css'
+import Navi from '../components/Custnav'
 
 const viewbookings = ({bookingusers}) => {
     
     const [bid, setId] = useState(false)
+    const [bookid, setbookid] = useState()
     const [Confirm, setConfirm] = useState(false)
     const [show, setShow] = useState(false)
 
@@ -28,8 +29,8 @@ const viewbookings = ({bookingusers}) => {
             if(t_day<=user.date)
                 list1.push(user)
     }
-    const Cancel = (event) => {
-        event.preventDefault()
+    const Cancel = (bookingid) => {
+        setbookid(bookingid)
             setConfirm(true)
     }
     const noCancel = () => {
@@ -39,28 +40,29 @@ const viewbookings = ({bookingusers}) => {
     const yesCancel = async () => {
         setConfirm(false)
         const res = await fetch(
-            `http://localhost:5000/bookings/${bid}`,
+            `http://localhost:5000/bookings/${bookid}`,
             {
                 method: 'DELETE'
             }
         )
         if (res.status == 200)
-            router.push('/custhome')
+            router.push('/viewbookings')
         else setShow(true)
     }
 
     return (
         <div className={styles.bookings}>
-            <Link href="/custhome"><a>Back</a></Link>
+            <Navi></Navi>
+            {/* <Link href="/custhome"><a>Back</a></Link> */}
             <h3>Previous Bookings</h3>
-            {show ? <p>Something went wrong or no values were entered</p> : null}
+            {show ? <p>Couldn't Cancel the booking</p> : null}
             <table className={styles.previousbooking}>
                 <thead>
                     <tr><td>Date</td><td>Time</td><td>Table</td><td>Number Of People</td></tr>
                 </thead>
             <tbody>
             {list.map((buser) => (
-                        <tr key={buser.name}><td>{buser.date}</td>
+                        <tr key={buser.id}><td>{buser.date}</td>
                             <td>{buser.time}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td></tr>
             ))}
             </tbody>
@@ -70,7 +72,7 @@ const viewbookings = ({bookingusers}) => {
                 <div>
                     <div className={styles.popupvb}>
                         <div className={styles.popuptextvb}>
-                            <p>Are you sure you want to delete this member?</p>
+                            <p>Are you sure you want to cancel this booking?</p>
                             <button onClick={yesCancel}>Yes</button>
                             <button onClick={noCancel}>No</button>
                         </div>
@@ -83,9 +85,9 @@ const viewbookings = ({bookingusers}) => {
                 </thead>
             <tbody>
             {list1.map((buser) => (
-                        <tr key={buser.name}><td>{buser.date}</td>
+                        <tr key={buser.id}><td>{buser.date}</td>
                             <td>{buser.time}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td>
-                            <td><button onClick={Cancel}>Cancel Booking</button></td></tr>
+                            <td><button onClick={() => Cancel(buser.id)}>Cancel Booking</button></td></tr>
             ))}
             </tbody>
             </table>
