@@ -20,7 +20,7 @@ const mtnstaff = ({ users }) => {
             <h1>Maintain staff</h1>
             <table style={{ border: "1px solid black" }}>
                 <thead>
-                    <tr><td>ID</td><td>Name</td><td>Email</td><td>Phone</td><td>Role</td></tr>
+                    <tr><td>Name</td><td>Email</td><td>Phone</td><td>Role</td></tr>
                 </thead>
                 <tbody>
                     {list.map((user) => (
