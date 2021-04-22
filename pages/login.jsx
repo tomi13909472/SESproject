@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import styles from '../styles/Login.module.css'
-const login = ({ users }) => {
+const login = ({ users, staff }) => {
 
     const [show, setShow] = useState(false)
+    // const [id, setId] = useState()
     const router = useRouter()
 
     const check = async (event) => {
         event.preventDefault()
 
         let cont = false
-        let name, id, staff
+        let isStaff = false
+        let name
+        let id
         const email = event.target.email.value
         const password = event.target.pwd.value
 
@@ -19,22 +21,33 @@ const login = ({ users }) => {
             if (email == user.email){
                 if (password == user.password){
                     name = user.name
-                    staff = user.staff
+                    id = user.id
+                    cont = true
+                    break;
+                }
+            }
+        }
+        for (const mem of staff) {
+            if (email == mem.email) {
+                if (password == mem.password){
+                    name = mem.name
+                    id = mem.id
                     cont = true;
+                    isStaff = true
+                    break;
                 }
             }
         }
         if (cont){
+            sessionStorage.setItem("id", id)
             sessionStorage.setItem("name", name)
             sessionStorage.setItem("email", email)
-            sessionStorage.setItem("id", id)
-            if (staff) router.push('/staffhome')
-            else router.push('/custhome')
+            if (isStaff) router.push('/staffhome')
+            // else router.push('/custhome')
         }
         else {
             setShow(true)
         }
-
 
     }
 
@@ -64,8 +77,11 @@ const login = ({ users }) => {
 export async function getStaticProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
+
+    const resp = await fetch(`http://localhost:5000/staff`)
+    const staff = await resp.json()
     return {
-        props: { users },
+        props: { users, staff },
     }
 }
 

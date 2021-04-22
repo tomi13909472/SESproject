@@ -6,7 +6,7 @@ import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 toast.configure()
-const booktable = ({ tableusers}) => {
+const booktable = ({ tableusers }) => {
     const router = useRouter()
     const [show, setShow] = useState(false)
     // const [popup, setpopup] = useState(false)
@@ -16,8 +16,8 @@ const booktable = ({ tableusers}) => {
     })
 
     function MinDate() {
-        var today_date = new Date()
-        today_date.setDate(today_date.getDate())
+        let today_date = new Date()
+        today_date.setDate(today_date.getDate() + 14)
         return today_date.toISOString().slice(0, 10) //2013-03-10T02:00:00Z
     }
 
@@ -28,7 +28,7 @@ const booktable = ({ tableusers}) => {
     async function onSubmit(event) {
         event.preventDefault()
         let cont=true;
-        var date=document.getElementById("date");
+        let date=document.getElementById("date");
         const MDate = event.target.date.value;
         const time = event.target.time.value;
         const table=event.target.table.value;
@@ -53,7 +53,7 @@ const booktable = ({ tableusers}) => {
                         email: sessionStorage.getItem("email"),
                         date: MDate,
                         time: time,
-                        table:table,
+                        table: table,
                         numberofpeople: persons,
                         personId : sessionStorage.getItem("id")
                     }),
@@ -63,8 +63,8 @@ const booktable = ({ tableusers}) => {
                 }
             )
             if (res.status == 201) {
-                var Name=sessionStorage.getItem("name");
-                var Email=sessionStorage.getItem("email")
+                let Name=sessionStorage.getItem("name");
+                let Email=sessionStorage.getItem("email")
                 sessionStorage.setItem("name",Name)
                 sessionStorage.setItem("email",Email)
                 router.push("/custhome")
@@ -129,7 +129,7 @@ export async function getStaticProps() {
     const restb = await fetch(`http://localhost:5000/bookings`)
     const tableusers = await restb.json()
     return {
-        props: { tableusers},
+        props: { tableusers },
     }
 }
 

@@ -13,11 +13,6 @@ const mtnmenu = ({ dishes }) => {
     const [file, setFile] = useState('')
     const [filename, setFilename] = useState('Choose File')
 
-    const list = new Array()
-    for (const dish of dishes) {
-        list.push(dish)
-    }
-
     function manage(id) {
         sessionStorage.setItem("dishID", id)
         router.push('/mtndish')
@@ -137,7 +132,7 @@ const mtnmenu = ({ dishes }) => {
                     <tr><td>Photo</td><td>Name</td><td>Category</td><td width="200">Description</td><td>Price</td><td></td></tr>
                 </thead>
                 <tbody>
-                    {list.map((dish) => (
+                    {dishes.map((dish) => (
                         <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
                             <td>{dish.name}</td>
                             <td>{dish.category}</td><td>{dish.desc}</td>

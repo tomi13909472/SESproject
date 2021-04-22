@@ -5,93 +5,17 @@
       "email": "hi@hi",
       "phone": "65789",
       "password": "hi",
-      "staff": false,
-      "id": "1"
-    },
-    {
-      "name": "yo",
-      "email": "yo@yo",
-      "phone": "57897",
-      "password": "yo",
-      "staff": false,
-      "id": "2"
-    },
-    {
-      "name": "bh",
-      "email": "bh@bh",
-      "phone": "",
-      "password": "bh",
-      "staff": false,
-      "id": "txRC8Ji"
-    },
-    {
-      "name": "hy",
-      "email": "hy@hy",
-      "phone": "",
-      "password": "hy",
-      "staff": false,
-      "id": "XYQTqaz"
-    },
-    {
-      "name": "bo",
-      "email": "bo@bo",
-      "phone": "76",
-      "password": "bo",
-      "staff": true,
-      "id": "69tnKQ4"
-    },
-    {
-      "name": "bn",
-      "email": "bn@bn",
-      "phone": "456789",
-      "password": "bn",
-      "staff": true,
-      "id": "RWANZcB"
-    },
-    {
-      "name": "gn",
-      "email": "gn@gn",
-      "phone": "57",
-      "password": "gn",
-      "staff": true,
-      "id": "Kk1WseD"
-    },
-    {
-      "name": "sir",
-      "email": "sir@sir",
-      "phone": "86",
-      "password": "sir",
-      "staff": true,
-      "id": "QHtxoAs"
-    },
-    {
-      "name": "sujith",
-      "email": "sujith@gmail.com",
-      "phone": "12345",
-      "password": "123456",
-      "staff": false,
-      "id": "ra9WGOJ"
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "phone": "4575",
-      "password": "abcd",
-      "staff": false,
-      "id": "NCaZcZm"
-    },
-    {
-      "name": "Mitchel",
-      "email": "mitchel@gmail.com",
-      "phone": "788457",
-      "password": "abcdefgh",
-      "staff": false,
-      "id": "t9HsUXS"
+      "id": "zGhYts"
     }
   ],
-  "passcode": [
+  "staff": [
     {
-      "code": "1234"
+      "name": "admin",
+      "email": "admin@admin",
+      "phone": "",
+      "role": "admin",
+      "password": "admin",
+      "id": "OmRDEe1"
     }
   ],
   "bookings": [

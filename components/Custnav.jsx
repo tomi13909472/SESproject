@@ -4,11 +4,11 @@ import Link from 'next/link'
 import styles from '../styles/custnav.module.css'
 const Nav = () => {    
     const router = useRouter()
-    const[email, setEmail] = useState()
+    const[id, setId] = useState()
 
     useEffect(() => {
-        setEmail(sessionStorage.getItem("email"))
-        if (email === null) router.push("/")
+        setId(sessionStorage.getItem("id"))
+        if (id === null) router.push('/')
     })
     const logout = () => {
         sessionStorage.clear()
