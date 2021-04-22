@@ -20,12 +20,12 @@ const mtnstaff = ({ users }) => {
             <h1>Maintain staff</h1>
             <table style={{ border: "1px solid black" }}>
                 <thead>
-                    <tr><td>ID</td><td>Name</td><td>Email</td><td>Phone</td></tr>
+                    <tr><td>ID</td><td>Name</td><td>Email</td><td>Phone</td><td>Role</td></tr>
                 </thead>
                 <tbody>
                     {list.map((user) => (
                         <tr key={user.id}><td>{user.name}</td>
-                            <td>{user.email}</td><td>{user.phone}</td>
+                            <td>{user.email}</td><td>{user.phone}</td><td>{user.role}</td>
                             <td><button onClick={() => manage(user.id)}>Manage</button></td></tr>
                     ))}
                 </tbody>
