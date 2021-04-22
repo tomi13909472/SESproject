@@ -28,12 +28,13 @@ const mtnone = ({ users }) => {
         event.preventDefault()
 
         let count = 0
-        let nName, nEmail, nPhone, nPwd
+        let nName, nEmail, nPhone, nPwd, nRole
         const name = event.target.name.value
         const email = event.target.email.value
         const phone = event.target.phone.value
         const pwd = event.target.pwd.value
-
+        const role = event.target.role.value
+        
         if (name == "") { nName = member.name; count++ }
         else nName = name
         if (email == "") { nEmail = member.email; count++ }
@@ -42,8 +43,9 @@ const mtnone = ({ users }) => {
         else nPhone = phone
         if (pwd == "") { nPwd = member.password; count++ }
         else nPwd = pwd
-
-        if (count == 4) {
+        if (role == ""){ nRole = member.role; count++}
+        else nRole = role
+        if (count == 5) {
             setShow(true)
         }
         else {
@@ -57,6 +59,7 @@ const mtnone = ({ users }) => {
                         email: nEmail,
                         phone: nPhone,
                         password: nPwd,
+                        role: nRole,
                         staff: true
                     }),
                     headers: {
@@ -141,6 +144,10 @@ const mtnone = ({ users }) => {
                             <tr>
                                 <td><label htmlFor="pwd">Password:</label></td>
                                 <td><input type="password" id="pwd" name="pwd" placeholder={member.password} /></td>
+                            </tr>
+                            <tr>
+                                <td><label htmlFor="role">Role:</label></td>
+                                <td><input type="text" id="role" name="role" placeholder={member.role}/></td>
                             </tr>
                         </tbody>
                     </table>

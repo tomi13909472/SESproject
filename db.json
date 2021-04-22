@@ -38,6 +38,7 @@
       "phone": "76",
       "password": "bo",
       "staff": true,
+      "role": "chef",
       "id": "69tnKQ4"
     },
     {
@@ -46,6 +47,7 @@
       "phone": "456789",
       "password": "bn",
       "staff": true,
+      "role": "chef",
       "id": "RWANZcB"
     },
     {
@@ -53,6 +55,7 @@
       "email": "gn@gn",
       "phone": "57",
       "password": "gn",
+      "role": "manager",
       "staff": true,
       "id": "Kk1WseD"
     },
@@ -62,6 +65,7 @@
       "phone": "86",
       "password": "sir",
       "staff": true,
+      "role": "chef",
       "id": "QHtxoAs"
     },
     {
