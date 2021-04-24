@@ -9,6 +9,7 @@ toast.configure()
 const booktable = ({ bookings }) => {
     const router = useRouter()
     const [show, setShow] = useState(false)
+    const [timeWarn, setTimeWarn] = useState(false)
     let change = false
     let date, time
 
@@ -39,14 +40,19 @@ const booktable = ({ bookings }) => {
     }
     
     function onTimeChange() {
+        setTimeWarn(false)
+        time = document.getElementById("time").value.slice(0, 2)
+        date = document.getElementById("date").value
+        if (time < 12 || time > 21){
+            setTimeWarn(true)
+            return
+        }
         document.getElementById("table").value = "select table"
         setShow(false)
         for (let i = 1; i < 7; i++){
             document.getElementById(`table ${i}`).disabled = false
         }
         let count = 0;
-        time = document.getElementById("time").value.slice(0, 2)
-        date = document.getElementById("date").value
         document.getElementById("table").disabled = false;
         for (let i = 0; i < bookings.length; i++){
             if (bookings[i].date == date && bookings[i].time == time){
@@ -104,14 +110,16 @@ const booktable = ({ bookings }) => {
     return (
         <div className="container-form">
             <Navi></Navi>
+            <h1>Reservation online</h1>
+            {timeWarn ? <p>Please select a time between 12 PM and 9 PM</p> : null}
             {show ? <p>All tables taken for this time</p> : null}
+
             {/* {popup ? 
             <div className="popup">
                 <p>Booking successful</p>
                 <button onClick={close}>close</button>
             </div> : null } */}
             <form className={styles.bookform} onSubmit={onSubmit}>
-            <h1>Reservation online</h1>
                 <table className={styles.booktable}>
                     <tbody>
                         <tr>
@@ -124,7 +132,7 @@ const booktable = ({ bookings }) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="time">Time:</label></td>
-                            <td><input required type="time" id="time" name="time" disabled onChange={onTimeChange}></input></td>
+                            <td><input required type="time" id="time" name="time" min="12:00" max="21:00" disabled onChange={onTimeChange}></input></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="table">Table:</label></td>

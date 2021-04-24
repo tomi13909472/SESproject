@@ -48,6 +48,14 @@
       "price": "20",
       "photoName": "ERD.png",
       "id": 4
+    },
+    {
+      "name": "pizza",
+      "category": "Entree",
+      "desc": "yeet",
+      "price": "20.00",
+      "photoName": "Choose File",
+      "id": 5
     }
   ]
 }

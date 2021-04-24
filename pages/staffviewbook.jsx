@@ -4,10 +4,25 @@ import { useState, useEffect } from 'react'
 const staffviewbook = ({ bookings }) => {
 
     const [books, setBooks] = useState([])
-
+    let today = new Date().toISOString().slice(0, 10)
     let date
+    useEffect(() => {
+        document.getElementById("date").setAttribute("min", today)
+        // deleteOld()
+    })
+    // async function deleteOld() {
+    //     for (let i = 0; i < bookings.length; i++)
+    //         if (bookings[i].date < today) {
+    //             const res = await fetch(
+    //                 `http://localhost:5000/bookings/${bookings[i].id}`,
+    //                 {
+    //                     method: 'DELETE'
+    //                 }
+    //             )
+    //         }
+    // }
 
-    function selSort(arr){
+    function selSort(arr) {
         for (let i = 0; i < arr.length; i++) {
             let lowest = arr[i].time
             let lowpos = i
@@ -24,16 +39,19 @@ const staffviewbook = ({ bookings }) => {
     function swap(first, second, arr) {
         let temp = arr[first]
         arr[first] = arr[second]
-        arr[second] = temp 
+        arr[second] = temp
     }
 
-    function onDateChange() {
+    async function onDateChange() {
         let arr = []
         setBooks([])
         date = document.getElementById("date").value
         for (let i = 0; i < bookings.length; i++) {
             if (bookings[i].date == date)
-            arr.push(bookings[i])
+                arr.push(bookings[i])
+            if (bookings[i] < today) {
+
+            }
         }
         selSort(arr)
         for (let i = 0; i < arr.length; i++)
