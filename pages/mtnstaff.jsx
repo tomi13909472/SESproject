@@ -68,10 +68,10 @@ const mtnstaff = ({ staff }) => {
             <button onClick={add}>Add Member</button>
             {addShow ?  //add new user pop up
                 <div>
-                    <div className={styles.adddish}>
-                        <h2>Add Dish</h2>
+                    <div className={styles.addmember}>
+                        <h2>Add Member</h2>
                         <form onSubmit={addConf}>
-                            <table className={styles.adddishtable}>
+                            <table className={styles.addmembertable}>
                                 <tbody>
                                     <tr>
                                         <td><label htmlFor="name">Name:</label></td>
@@ -95,7 +95,7 @@ const mtnstaff = ({ staff }) => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <div className={styles.adddishsubmit}>
+                            <div className={styles.addmembersubmit}>
                                 <input type="submit" value="Add Member" />
                                 <button onClick={cancel}>Cancel</button>
                             </div>

@@ -16,6 +16,14 @@
       "role": "admin",
       "password": "admin",
       "id": "OmRDEe1"
+    },
+    {
+      "name": "gn",
+      "email": "gn@gn",
+      "phone": "456",
+      "role": "chef",
+      "password": "gn",
+      "id": "t94IlvS"
     }
   ],
   "bookings": [
@@ -88,6 +96,16 @@
       "numberofpeople": "3",
       "personId": "NCaZcZm",
       "id": 8
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-07",
+      "time": "21:26",
+      "table": "table 2",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 9
     }
   ],
   "dishes": [

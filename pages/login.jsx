@@ -43,7 +43,7 @@ const login = ({ users, staff }) => {
             sessionStorage.setItem("name", name)
             sessionStorage.setItem("email", email)
             if (isStaff) router.push('/staffhome')
-            // else router.push('/custhome')
+            else router.push('/custhome')
         }
         else {
             setShow(true)
