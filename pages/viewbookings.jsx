@@ -63,7 +63,7 @@ const viewbookings = ({bookingusers}) => {
             <tbody>
             {list.map((buser) => (
                         <tr key={buser.id}><td>{buser.date}</td>
-                            <td>{buser.time}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td></tr>
+                            <td>{buser.time + ":00"}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td></tr>
             ))}
             </tbody>
             </table>
@@ -86,7 +86,7 @@ const viewbookings = ({bookingusers}) => {
             <tbody>
             {list1.map((buser) => (
                         <tr key={buser.id}><td>{buser.date}</td>
-                            <td>{buser.time}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td>
+                            <td>{buser.time + ":00"}</td><td>{buser.table}</td><td>{buser.numberofpeople}</td>
                             <td><button onClick={() => Cancel(buser.id)}>Cancel Booking</button></td></tr>
             ))}
             </tbody>

@@ -1,11 +1,12 @@
 {
   "users": [
     {
-      "name": "hi",
-      "email": "hi@hi",
-      "phone": "65789",
-      "password": "hi",
-      "id": "zGhYts"
+      "name": "du",
+      "email": "du@du",
+      "phone": "577",
+      "loyalty": 1,
+      "password": "du",
+      "id": "NB_041p"
     }
   ],
   "staff": [
@@ -23,21 +24,41 @@
       "name": "hi",
       "email": "hi@hi",
       "date": "2021-05-08",
-      "time": "00",
-      "table": "table 2",
-      "numberofpeople": "3",
-      "personId": "zGhYts",
-      "id": 10
-    },
-    {
-      "name": "hi",
-      "email": "hi@hi",
-      "date": "2021-05-08",
       "time": "13",
       "table": "table 3",
       "numberofpeople": "3",
       "personId": "zGhYts",
       "id": 11
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-09",
+      "time": "18",
+      "table": "table 3",
+      "numberofpeople": "6",
+      "personId": "zGhYts",
+      "id": 12
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "20",
+      "table": "table 2",
+      "numberofpeople": "2",
+      "personId": "zGhYts",
+      "id": 13
+    },
+    {
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-04-10",
+      "time": "14",
+      "table": "table 3",
+      "numberofpeople": "1",
+      "personId": "NB_041p",
+      "id": 14
     }
   ],
   "dishes": [

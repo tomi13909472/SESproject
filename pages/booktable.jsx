@@ -10,8 +10,10 @@ const booktable = ({ bookings }) => {
     const router = useRouter()
     const [show, setShow] = useState(false)
     const [timeWarn, setTimeWarn] = useState(false)
+    const [showSubmit, setSubmit] = useState(false)
     let change = false
-    let date, time
+    let date
+    let time
 
     // const [popup, setpopup] = useState(false)
 
@@ -25,11 +27,9 @@ const booktable = ({ bookings }) => {
         return today_date.toISOString().slice(0, 10) //2013-03-10T02:00:00Z
     }
 
-    const notify =()=>{
-        toast.success('Booking Successful!',{ position:toast.POSITION.TOP_CENTER })
-    }
 
     function onDateChange() {
+        setSubmit(false)
         document.getElementById("table").disabled = true
         document.getElementById("table").value = "select table"
         document.getElementById("person").disabled = true
@@ -40,6 +40,7 @@ const booktable = ({ bookings }) => {
     }
     
     function onTimeChange() {
+        setSubmit(false)
         setTimeWarn(false)
         time = document.getElementById("time").value.slice(0, 2)
         date = document.getElementById("date").value
@@ -66,19 +67,21 @@ const booktable = ({ bookings }) => {
 
     function onTableChange() {
         document.getElementById("person").disabled = false
+        setSubmit(true)
     }
 
-    function onPersonChange() {
-        document.getElementById("submit").disabled = false
-    }
 
     async function onSubmit(event) {
         event.preventDefault()
-        let cont=true;
-        const MDate = date;
-        const MTime = time;
-        const table=event.target.table.value;
-        const persons=event.target.person.value;
+        let cont = true;
+        if (time < 12 || time > 21){
+            setTimeWarn(true)
+            return
+        }
+        const MDate = event.target.date.value
+        const MTime = event.target.time.value.slice(0, 2)
+        const table = event.target.table.value;
+        const persons = event.target.person.value;
 
         if (cont) {
             const res = await fetch(
@@ -100,6 +103,7 @@ const booktable = ({ bookings }) => {
                 }
             )
             if (res.status == 201) {
+                toast.success('Booking Successful!',{ position:toast.POSITION.TOP_CENTER })
                 router.push("/custhome")
             }
         }
@@ -148,18 +152,20 @@ const booktable = ({ bookings }) => {
                         </tr>
                         <tr>
                             <td><label htmlFor="person">How many people:</label></td>
-                            <td><select required name="person" id="person" onChange={onPersonChange} disabled>
+                            <td><select required name="person" id="person" disabled>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
-                                <option value="6">5+</option>
+                                <option value="5+">5+</option>
                                 </select></td>
                         </tr>
                     </tbody>
                 </table>
-                <input onClick={notify} type="submit" value="Submit" id="submit" disabled/>
+                {showSubmit ? 
+                    <input type="submit" value="Submit" id="submit" />
+                : null}
             </form>
         </div>
     )

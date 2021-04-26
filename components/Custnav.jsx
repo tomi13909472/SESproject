@@ -18,6 +18,7 @@ const Nav = () => {
     return (
         <nav className={styles.cnav}>
             <Link href="/custhome"><a>Home</a></Link>
+            <Link href="/updateCust"><a>Update Details</a></Link>
             <Link href="/booktable"><a>Book Table</a></Link>
             <Link href="/viewbookings"><a>View Bookings</a></Link>
             <button className={styles.cbtn} onClick={logout}>Logout</button>

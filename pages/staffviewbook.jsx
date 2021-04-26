@@ -72,7 +72,7 @@ const staffviewbook = ({ bookings }) => {
                     <tbody>
                         {books.map((book) => (
                             <tr key={book.id}><td>{book.date}</td>
-                                <td>{book.time}</td><td>{book.table}</td><td>{book.numberofpeople}</td>
+                                <td>{book.time + ":00"}</td><td>{book.table}</td><td>{book.numberofpeople}</td>
                             </tr>
                         ))}
                     </tbody>

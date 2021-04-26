@@ -38,6 +38,7 @@ const register = ({ users, staff }) => {
                         name: name,
                         email: email,
                         phone: phone,
+                        loyalty: 0,
                         password: password
                     }),
                     headers: {
