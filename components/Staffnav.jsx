@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/staffnav.module.css'
+import classNames from 'classnames'
 const Nav = ({ staff }) => {    
     const router = useRouter()
     const[id, setId] = useState()
@@ -14,13 +15,15 @@ const Nav = ({ staff }) => {
         sessionStorage.clear()
         router.push('/')
     }
+    // const sbtnClass = classNames('sbtn', 'sbtn1')
 
     return (
         <nav className={styles.snav}>
             <Link href="/staffhome"><a>Home</a></Link>
             <Link href="/mtnstaff"><a>Maintain staff</a></Link>
             <Link href="/mtnmenu"><a>Manage menu</a></Link>
-            <button className={styles.sbtn} onClick={logout}>Logout</button>
+            <Link href='/staffviewbook'><a>View Bookings</a></Link>
+            <button className={styles.sbtnClass} onClick={logout}>Logout</button>
         </nav>
     )
 }

@@ -1,11 +1,12 @@
-.staffhome h1{
+.Staffhome h1{
     text-align: center;
     font:30px;
     color: white;
   }
-  .staffhome p{
+  .Staffhome p{
     font-size: 30px;
     font-display:bold;
     font-family: Arial, Helvetica, sans-serif;
-    color: yellow;
+    color: white;
+    margin-left: 10px;
   }

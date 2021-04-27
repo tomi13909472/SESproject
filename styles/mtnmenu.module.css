@@ -18,12 +18,12 @@
     margin-left:auto;
     margin-right: auto;
 }
-.adddishtable textarea, .adddishtable input[type="number"], .adddishtable input[type="file"], .adddishtable input[type="text"]{
+.adddishtable textarea, .adddishtable input[type="number"], .adddishtable input[type="file"], .adddishtable input[type="text"], .adddishtable select{
     border:0;
     background: none;
     display: block;
     margin: 7px auto; /*changing the first parameter decreases the size of the form*/
-    text-align:center;
+    text-align:center;  
     border:2px solid #3498db;
     padding: 14px 10px;
     width: 200px;
@@ -33,7 +33,11 @@
     transition: 0.25s;
     margin-bottom:1px;
 }
-.adddishtable textarea:focus, .adddishtable input[type="number"]:focus, .adddishtable input[type="file"]:focus, .adddishtable input[type="text"]:focus{
+.adddishtable select{
+    background: #191919;
+
+}
+.adddishtable textarea:focus, .adddishtable input[type="number"]:focus, .adddishtable input[type="file"]:focus, .adddishtable input[type="text"]:focus, .adddishtable select:focus{
     width:280px;
     border-color: #2ecc71;
 }
@@ -72,7 +76,7 @@
     /* float:right; */
 }
 .adddish button:hover{
-    background: #2ecc71;
+    background-color: #2ecc71;
 }
 .addmembersubmit{
     text-align: center;
@@ -109,6 +113,60 @@
 .mtnmenutable tbody tr:last-of-type{
     border-bottom: 2px solid #009879;
 }
+.mtnmenutable tbody td{
+    text-align: center;
+}
 .mtnmenutable button:hover{
-    background: #009879;
+    background: #3498db;
+}
+.mtnmenu h1{
+    margin-left: 10px;
+}
+.mtnmenub {
+    margin-left: 10px;
+    border:0;
+    background: none;
+    display: block;
+    text-align: center;
+    border:2px solid #3498db;
+    padding:14px 40px;
+    outline:none;
+    color:white;
+    border-radius:24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.mtnmenub:hover{
+    background-color: #3498db;
+}
+.mtnmenuopt p{
+    display: inline-block;
+    margin-left: 10px;
+}
+.mtnmenuopt select{
+    border:0;
+    background: #191919;
+    margin-left: 10px;
+    text-align:center;
+    border:2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.mtnmenutable button{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border:2px solid #3498db;
+    padding:14px 20px;
+    outline:none;
+    color:black;
+    border-radius:24px;
+    transition: 0.25s;
+    cursor: pointer;
 }

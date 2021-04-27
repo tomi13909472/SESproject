@@ -28,84 +28,44 @@
   ],
   "bookings": [
     {
-      "name": "sujith",
-      "email": "sujith@gmail.com",
-      "date": "2021-04-19",
-      "time": "17:30",
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-09",
+      "time": "14:00",
       "table": "table 3",
-      "numberofpeople": "1",
-      "personId": "ra9WGOJ",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
       "id": 1
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-18",
-      "time": "16:38",
-      "table": "table 5",
-      "numberofpeople": "2",
-      "personId": "NCaZcZm",
-      "id": 2
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-16",
-      "time": "23:00",
-      "table": "table 3",
-      "numberofpeople": "1",
-      "personId": "NCaZcZm",
-      "id": 4
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-19",
-      "time": "17:30",
-      "table": "table 4",
-      "numberofpeople": "1",
-      "personId": "NCaZcZm",
-      "id": 5
-    },
-    {
-      "name": "sujith",
-      "email": "sujith@gmail.com",
-      "date": "2021-04-20",
-      "time": "20:30",
-      "table": "table 3",
-      "numberofpeople": "3",
-      "personId": "ra9WGOJ",
-      "id": 6
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-20",
-      "time": "20:24",
-      "table": "table 2",
-      "numberofpeople": "3",
-      "personId": "NCaZcZm",
-      "id": 7
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-23",
-      "time": "11:00",
-      "table": "table 2",
-      "numberofpeople": "3",
-      "personId": "NCaZcZm",
-      "id": 8
     },
     {
       "name": "hi",
       "email": "hi@hi",
-      "date": "2021-05-07",
-      "time": "21:26",
-      "table": "table 2",
+      "date": "2021-05-14",
+      "time": "14:00",
+      "table": "table 4",
       "numberofpeople": "3",
       "personId": "zGhYts",
-      "id": 9
+      "id": 2
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "15",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 3
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "14",
+      "table": "table 4",
+      "numberofpeople": "2",
+      "personId": "zGhYts",
+      "id": 4
     }
   ],
   "dishes": [
@@ -116,6 +76,14 @@
       "price": "20",
       "photoName": "ERD.png",
       "id": 4
+    },
+    {
+      "name": "pizza",
+      "category": "Entree",
+      "desc": "yeet",
+      "price": "20.00",
+      "photoName": "Choose File",
+      "id": 5
     }
   ]
 }

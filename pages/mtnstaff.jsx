@@ -65,7 +65,7 @@ const mtnstaff = ({ staff }) => {
         <div className={styles.mtn}>
             <Navi></Navi>
             <h1>Maintain staff</h1>
-            <button onClick={add}>Add Member</button>
+            <button  className={styles.mtnb} onClick={add}>Add Member</button>
             {addShow ?  //add new user pop up
                 <div>
                     <div className={styles.addmember}>
