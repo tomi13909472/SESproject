@@ -9,9 +9,10 @@ const viewbookings = ({bookingusers}) => {
     const [bookid, setbookid] = useState()
     const [Confirm, setConfirm] = useState(false)
     const [show, setShow] = useState(false)
-
+  
     const list = new Array()
     const list1 = new Array()
+    
     var today_date = new Date()
     today_date.setDate(today_date.getDate()+1)
     var t_day=today_date.toISOString().slice(0, 10)
@@ -21,14 +22,25 @@ const viewbookings = ({bookingusers}) => {
    })
     for (const user of bookingusers) {
         if(user.personId == bid)
+        {
             if(t_day>user.date)
+            {
                 list.push(user)
+            }     
+        }
     }
+    
     for (const user of bookingusers) {
         if(user.personId == bid)
+        {
             if(t_day<=user.date)
+            {
                 list1.push(user)
+            }
+        }
+                
     }
+    
     const Cancel = (bookingid) => {
         setbookid(bookingid)
             setConfirm(true)

@@ -12,10 +12,23 @@ const mtnmenu = ({ dishes }) => {
     const [addShow, setAddShow] = useState(false)
     const [file, setFile] = useState('')
     const [filename, setFilename] = useState('Choose File')
+    const [catDishes, setCatDishes] = useState()
 
-    const list = new Array()
-    for (const dish of dishes) {
-        list.push(dish)
+    function onCatChange() {
+        setCatDishes([])
+        const cat = document.getElementById("category").value
+        if (cat != "All") {
+            for (let i = 0; i < dishes.length; i++) {
+                if (dishes[i].category == cat) {
+                    setCatDishes(catDishes => [...catDishes, dishes[i]])
+                }
+            }
+        }
+        else {
+            for (let i = 0; i < dishes.length; i++) {
+                setCatDishes(catDishes => [...catDishes, dishes[i]])
+            }
+        }
     }
 
     function manage(id) {
@@ -39,12 +52,12 @@ const mtnmenu = ({ dishes }) => {
 
     const uploadFile = async () => {
         const formData = new FormData()
-            formData.append('photo', file)
-            const resp = await axios.post('/api/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            })
+        formData.append('photo', file)
+        const resp = await axios.post('/api/upload', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
     }
 
     async function addConf(event) {
@@ -84,10 +97,21 @@ const mtnmenu = ({ dishes }) => {
     }
 
     return (
-        <div>
+        <div className={styles.mtnmenu}>
             <Navi></Navi>
             <h1>Maintain menu</h1>
-            <button onClick={add}>Add Dish</button>
+            <button  className={styles.mtnmenub} onClick={add}>Add Dish</button>
+            <br />
+            <div className={styles.mtnmenuopt}>
+                <p>Sort by category:</p>
+                <select name="category" id="category" onChange={onCatChange}>
+                    <option value="All">All</option>
+                    <option value="Entree">Entree</option>
+                    <option value="Main">Main</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Side">Side</option>
+                </select>
+            </div>
             {addShow ?  //Warning for deleting user
                 <div>
                     <div className={styles.adddish}>
@@ -97,30 +121,29 @@ const mtnmenu = ({ dishes }) => {
                                 <tbody>
                                     <tr>
                                         <td><label htmlFor="name">Name:</label></td>
-                                        <td><input type="text" name="name" id="name" /></td>
+                                        <td><input type="text" name="name" id="name" required /></td>
                                     </tr>
                                     <tr>
                                         <td><label htmlFor="cat">Category:</label></td>
-                                        <td><input type="text" list="cats" id="cat" name="cat" />
-                                        <datalist id="cats">
-                                            <option value="Entree"></option>
-                                            <option value="Main"></option>
-                                            <option value="Desert"></option>
-                                            <option value="Side"></option>
-                                        </datalist>
+                                        <td><select name="cat" id="cat" required>
+                                            <option value="Entree">Entree</option>
+                                            <option value="Main">Main</option>
+                                            <option value="Dessert">Dessert</option>
+                                            <option value="Side">Side</option>
+                                        </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><label htmlFor="desc">Description:</label></td>
-                                        <td><textarea name="desc" cols="22" rows="5" /></td>
+                                        <td><textarea name="desc" cols="22" rows="5" required /></td>
                                     </tr>
                                     <tr>
                                         <td><label htmlFor="price">Price:</label></td>
-                                        <td><input type="number" id="price" name="price" min="0" /></td>
+                                        <td><input type="number" id="price" name="price" min="0" required /></td>
                                     </tr>
                                     <tr>
                                         <td><label htmlFor="photo">Picture:</label></td>
-                                        <td><input type="file" name="photo" id="photo" onChange={onChange} /></td>
+                                        <td><input type="file" name="photo" id="photo" onChange={onChange} required /></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -132,12 +155,13 @@ const mtnmenu = ({ dishes }) => {
                     </div>
                 </div>
                 : null}
-            <table className={styles.mtnmenutable}>
+            {catDishes ? 
+                <table className={styles.mtnmenutable}>
                 <thead>
                     <tr><td>Photo</td><td>Name</td><td>Category</td><td width="200">Description</td><td>Price</td><td></td></tr>
                 </thead>
                 <tbody>
-                    {list.map((dish) => (
+                    {catDishes.map((dish) => (
                         <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
                             <td>{dish.name}</td>
                             <td>{dish.category}</td><td>{dish.desc}</td>
@@ -146,6 +170,22 @@ const mtnmenu = ({ dishes }) => {
                     ))}
                 </tbody>
             </table>
+            :
+            <table className={styles.mtnmenutable}>
+                <thead>
+                    <tr><td>Photo</td><td>Name</td><td>Category</td><td width="200">Description</td><td>Price</td><td></td></tr>
+                </thead>
+                <tbody>
+                    {dishes.map((dish) => (
+                        <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
+                            <td>{dish.name}</td>
+                            <td>{dish.category}</td><td>{dish.desc}</td>
+                            <td>{dish.price}</td>
+                            <td><button onClick={() => manage(dish.id)}>Manage</button></td></tr>
+                    ))}
+                </tbody>
+            </table>
+            }
         </div>
     )
 }

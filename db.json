@@ -5,169 +5,67 @@
       "email": "hi@hi",
       "phone": "65789",
       "password": "hi",
-      "staff": false,
-      "id": "1"
-    },
+      "id": "zGhYts"
+    }
+  ],
+  "staff": [
     {
-      "name": "yo",
-      "email": "yo@yo",
-      "phone": "57897",
-      "password": "yo",
-      "staff": false,
-      "id": "2"
-    },
-    {
-      "name": "bh",
-      "email": "bh@bh",
+      "name": "admin",
+      "email": "admin@admin",
       "phone": "",
-      "password": "bh",
-      "staff": false,
-      "id": "txRC8Ji"
-    },
-    {
-      "name": "hy",
-      "email": "hy@hy",
-      "phone": "",
-      "password": "hy",
-      "staff": false,
-      "id": "XYQTqaz"
-    },
-    {
-      "name": "bo",
-      "email": "bo@bo",
-      "phone": "76",
-      "password": "bo",
-      "staff": true,
-      "role": "chef",
-      "id": "69tnKQ4"
-    },
-    {
-      "name": "bn",
-      "email": "bn@bn",
-      "phone": "456789",
-      "password": "bn",
-      "staff": true,
-      "role": "chef",
-      "id": "RWANZcB"
+      "role": "admin",
+      "password": "admin",
+      "id": "OmRDEe1"
     },
     {
       "name": "gn",
       "email": "gn@gn",
-      "phone": "57",
-      "password": "gn",
-      "role": "manager",
-      "staff": true,
-      "id": "Kk1WseD"
-    },
-    {
-      "name": "sir",
-      "email": "sir@sir",
-      "phone": "86",
-      "password": "sir",
-      "staff": true,
+      "phone": "456",
       "role": "chef",
-      "id": "QHtxoAs"
-    },
-    {
-      "name": "sujith",
-      "email": "sujith@gmail.com",
-      "phone": "12345",
-      "password": "123456",
-      "staff": false,
-      "id": "ra9WGOJ"
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "phone": "4575",
-      "password": "abcd",
-      "staff": false,
-      "id": "NCaZcZm"
-    },
-    {
-      "name": "Mitchel",
-      "email": "mitchel@gmail.com",
-      "phone": "788457",
-      "password": "abcdefgh",
-      "staff": false,
-      "id": "t9HsUXS"
-    }
-  ],
-  "passcode": [
-    {
-      "code": "1234"
+      "password": "gn",
+      "id": "t94IlvS"
     }
   ],
   "bookings": [
     {
-      "name": "sujith",
-      "email": "sujith@gmail.com",
-      "date": "2021-04-19",
-      "time": "17:30",
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-09",
+      "time": "14:00",
       "table": "table 3",
-      "numberofpeople": "1",
-      "personId": "ra9WGOJ",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
       "id": 1
     },
     {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-18",
-      "time": "16:38",
-      "table": "table 5",
-      "numberofpeople": "2",
-      "personId": "NCaZcZm",
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-14",
+      "time": "14:00",
+      "table": "table 4",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
       "id": 2
     },
     {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-16",
-      "time": "23:00",
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "15",
       "table": "table 3",
-      "numberofpeople": "1",
-      "personId": "NCaZcZm",
-      "id": 4
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 3
     },
     {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-19",
-      "time": "17:30",
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "14",
       "table": "table 4",
-      "numberofpeople": "1",
-      "personId": "NCaZcZm",
-      "id": 5
-    },
-    {
-      "name": "sujith",
-      "email": "sujith@gmail.com",
-      "date": "2021-04-20",
-      "time": "20:30",
-      "table": "table 3",
-      "numberofpeople": "3",
-      "personId": "ra9WGOJ",
-      "id": 6
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-20",
-      "time": "20:24",
-      "table": "table 2",
-      "numberofpeople": "3",
-      "personId": "NCaZcZm",
-      "id": 7
-    },
-    {
-      "name": "abcd",
-      "email": "abcd@abcd",
-      "date": "2021-04-23",
-      "time": "11:00",
-      "table": "table 2",
-      "numberofpeople": "3",
-      "personId": "NCaZcZm",
-      "id": 8
+      "numberofpeople": "2",
+      "personId": "zGhYts",
+      "id": 4
     }
   ],
   "dishes": [
@@ -178,6 +76,14 @@
       "price": "20",
       "photoName": "ERD.png",
       "id": 4
+    },
+    {
+      "name": "pizza",
+      "category": "Entree",
+      "desc": "yeet",
+      "price": "20.00",
+      "photoName": "Choose File",
+      "id": 5
     }
   ]
 }

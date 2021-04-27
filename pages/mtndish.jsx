@@ -112,13 +112,16 @@ const mtndish = ({ dishes }) => {
                 method: 'DELETE'
             }
         )
-        if (res.status == 200)
+        if (res.status == 200){
+            sessionStorage.removeItem("dishID")
             router.push('/mtnmenu')
+        }
         else setShow(true)
     }
 
     const cancel = (event) => {
         event.preventDefault()
+        sessionStorage.removeItem("dishID")
         router.push('/mtnmenu')
     }
 

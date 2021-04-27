@@ -1,0 +1,12 @@
+.home{
+    background-color: #2ecc71;
+    padding:53px;
+}
+.homepage a{
+    margin-left: 350px;
+    font-size: xx-large;
+}
+/* .homepage{
+    background: url('../public/background.png') no-repeat center;
+    background-size: contain;
+} */
