@@ -65,7 +65,6 @@ const mtnstaff = ({ staff }) => {
         <div className={styles.mtn}>
             <Navi></Navi>
             <h1>Maintain staff</h1>
-<<<<<<< HEAD
             <button  className={styles.mtnb} onClick={add}>Add Member</button>
             {addShow ?  //add new user pop up
                 <div>
@@ -73,15 +72,6 @@ const mtnstaff = ({ staff }) => {
                         <h2>Add Member</h2>
                         <form onSubmit={addConf}>
                             <table className={styles.addmembertable}>
-=======
-            <button onClick={add}>Add Member</button>
-            {addShow ?  //add new user pop up
-                <div>
-                    <div className={styles.adddish}>
-                        <h2>Add Dish</h2>
-                        <form onSubmit={addConf}>
-                            <table className={styles.adddishtable}>
->>>>>>> 5c972ad1c4a355d8f79104a970a3463585774586
                                 <tbody>
                                     <tr>
                                         <td><label htmlFor="name">Name:</label></td>
@@ -105,11 +95,7 @@ const mtnstaff = ({ staff }) => {
                                     </tr>
                                 </tbody>
                             </table>
-<<<<<<< HEAD
                             <div className={styles.addmembersubmit}>
-=======
-                            <div className={styles.adddishsubmit}>
->>>>>>> 5c972ad1c4a355d8f79104a970a3463585774586
                                 <input type="submit" value="Add Member" />
                                 <button onClick={cancel}>Cancel</button>
                             </div>

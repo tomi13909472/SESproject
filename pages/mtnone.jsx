@@ -38,7 +38,6 @@ const mtnone = ({ staff }) => {
         const phone = event.target.phone.value
         const role = event.target.role.value
         const pwd = event.target.pwd.value
-        const role = event.target.role.value
         
         if (name == "") { nName = member.name; count++ }
         else nName = name
@@ -156,10 +155,6 @@ const mtnone = ({ staff }) => {
                             <tr>
                                 <td><label htmlFor="pwd">Password:</label></td>
                                 <td><input type="password" id="pwd" name="pwd" placeholder={member.password} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="role">Role:</label></td>
-                                <td><input type="text" id="role" name="role" placeholder={member.role}/></td>
                             </tr>
                         </tbody>
                     </table>
