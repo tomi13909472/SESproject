@@ -69,7 +69,7 @@ const mtnstaff = ({ staff }) => {
             {addShow ?  //add new user pop up
                 <div>
                     <div className={styles.adddish}>
-                        <h2>Add Dish</h2>
+                        <h2>Add Member</h2>
                         <form onSubmit={addConf}>
                             <table className={styles.adddishtable}>
                                 <tbody>

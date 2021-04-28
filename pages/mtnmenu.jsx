@@ -13,22 +13,76 @@ const mtnmenu = ({ dishes }) => {
     const [file, setFile] = useState('')
     const [filename, setFilename] = useState('Choose File')
     const [catDishes, setCatDishes] = useState()
+    const [catWarn, setCatWarn] = useState(false)
+
+    let entree = []
+    let main = []
+    let dessert = []
+    let side =[]
+
+    for (const dish of dishes){
+        switch(dish.category){
+            case "Entree":
+                entree.push(dish);
+                break;
+            case "Main":
+                main.push(dish);
+                break;
+            case "Dessert":
+                dessert.push(dish);
+                break;
+            case "Side":
+                side.push(dish)
+                break;
+        }
+    }
 
     function onCatChange() {
         setCatDishes([])
         const cat = document.getElementById("category").value
-        if (cat != "All") {
-            for (let i = 0; i < dishes.length; i++) {
-                if (dishes[i].category == cat) {
-                    setCatDishes(catDishes => [...catDishes, dishes[i]])
-                }
+            switch (cat) {
+                case "Entree":
+                    setCatDishes(entree);
+                    break;
+                case "Main":
+                    setCatDishes(main);
+                    break;
+                case "Dessert":
+                    setCatDishes(dessert);
+                    break;
+                case "Side":
+                    setCatDishes(side);
+                    break;
+                default:
+                    setCatDishes(dishes);
+                    break;
             }
+    }
+
+    function onAddChange() {
+        const cat = document.getElementById("cat").value
+        let temp = []
+        let count = 0
+        let total = 0
+        switch (cat) {
+            case "Entree":
+                temp = entree
+                break;
+            case "Main":
+                temp = main
+                break;
+            case "Dessert":
+                temp = dessert
+                break;
+            case "Side":
+                temp = dessert
+                break;
         }
-        else {
-            for (let i = 0; i < dishes.length; i++) {
-                setCatDishes(catDishes => [...catDishes, dishes[i]])
-            }
+        for (const dish of temp){
+            total = total + parseInt(dish.price)
+            count++
         }
+        document.getElementById("price").value = Math.round(total/count)
     }
 
     function manage(id) {
@@ -43,6 +97,7 @@ const mtnmenu = ({ dishes }) => {
     function cancel(event) {
         event.preventDefault()
         setAddShow(false)
+        setCatWarn(false)
     }
 
     const onChange = e => {
@@ -61,12 +116,19 @@ const mtnmenu = ({ dishes }) => {
     }
 
     async function addConf(event) {
+        
+        event.preventDefault();
 
         const name = event.target.name.value
         const cat = event.target.cat.value
         const desc = event.target.desc.value
         const price = event.target.price.value
 
+        console.log(cat)
+        if (cat == "Select"){
+            setCatWarn(true)
+            return
+        }
         event.preventDefault()
         uploadFile()
         const res = await fetch(
@@ -123,9 +185,11 @@ const mtnmenu = ({ dishes }) => {
                                         <td><label htmlFor="name">Name:</label></td>
                                         <td><input type="text" name="name" id="name" required /></td>
                                     </tr>
+                                    {catWarn ? <tr><td></td><td><p style={{margin: "0"}}>Must select a category</p></td></tr>: null}
                                     <tr>
                                         <td><label htmlFor="cat">Category:</label></td>
-                                        <td><select name="cat" id="cat" required>
+                                        <td><select name="cat" id="cat" onChange={onAddChange} required>
+                                            <option value="Select">Select</option>
                                             <option value="Entree">Entree</option>
                                             <option value="Main">Main</option>
                                             <option value="Dessert">Dessert</option>
@@ -139,11 +203,11 @@ const mtnmenu = ({ dishes }) => {
                                     </tr>
                                     <tr>
                                         <td><label htmlFor="price">Price:</label></td>
-                                        <td><input type="number" id="price" name="price" min="0" required /></td>
+                                        <td><input type="number" id="price" name="price" min="0" step="1" required /></td>
                                     </tr>
                                     <tr>
                                         <td><label htmlFor="photo">Picture:</label></td>
-                                        <td><input type="file" name="photo" id="photo" onChange={onChange} required /></td>
+                                        <td><input type="file" name="photo" id="photo" onChange={onChange} /></td>
                                     </tr>
                                 </tbody>
                             </table>
