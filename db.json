@@ -17,6 +17,14 @@
       "role": "admin",
       "password": "admin",
       "id": "OmRDEe1"
+    },
+    {
+      "name": "gn",
+      "email": "gn@gn",
+      "phone": "456",
+      "role": "chef",
+      "password": "gn",
+      "id": "t94IlvS"
     }
   ],
   "bookings": [

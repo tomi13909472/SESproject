@@ -40,6 +40,7 @@
 }
 .registerform label{
   color: white;
+  margin-left: 30px ;
 }
 .registerform input[type="submit"]{
   border:0;
@@ -54,5 +55,6 @@
   border-radius:24px;
   transition: 0.25s;
   cursor: pointer;
+  margin-left: 150px;
 }
 

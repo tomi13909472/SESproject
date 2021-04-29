@@ -38,7 +38,7 @@ const mtnone = ({ staff }) => {
         const phone = event.target.phone.value
         const role = event.target.role.value
         const pwd = event.target.pwd.value
-
+        
         if (name == "") { nName = member.name; count++ }
         else nName = name
         if (email == "") { nEmail = member.email; count++ }
@@ -47,7 +47,7 @@ const mtnone = ({ staff }) => {
         else nPhone = phone
         if (pwd == "") { nPwd = member.password; count++ }
         else nPwd = pwd
-        if (role == "") { nRole = member.role; count ++ }
+        if (role == "") { nRole = member.role; count++ }
         else nRole = role
 
         if (count == 5) {

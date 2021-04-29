@@ -97,13 +97,13 @@ const mtnmenu = ({ dishes }) => {
     }
 
     return (
-        <div>
+        <div className={styles.mtnmenu}>
             <Navi></Navi>
             <h1>Maintain menu</h1>
-            <button onClick={add}>Add Dish</button>
+            <button  className={styles.mtnmenub} onClick={add}>Add Dish</button>
             <br />
-            <div>
-                <p style={{ display: "inline-block" }}>Sort by category:</p>
+            <div className={styles.mtnmenuopt}>
+                <p>Sort by category:</p>
                 <select name="category" id="category" onChange={onCatChange}>
                     <option value="All">All</option>
                     <option value="Entree">Entree</option>

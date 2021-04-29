@@ -14,6 +14,7 @@ const Nav = ({ staff }) => {
         sessionStorage.clear()
         router.push('/')
     }
+    // const sbtnClass = classNames('sbtn', 'sbtn1')
 
     return (
         <nav className={styles.snav}>
@@ -21,7 +22,7 @@ const Nav = ({ staff }) => {
             <Link href="/mtnstaff"><a>Maintain staff</a></Link>
             <Link href="/mtnmenu"><a>Manage menu</a></Link>
             <Link href='/staffviewbook'><a>View Bookings</a></Link>
-            <button className={styles.sbtn} onClick={logout}>Logout</button>
+            <button className={styles.sbtnClass} onClick={logout}>Logout</button>
         </nav>
     )
 }
