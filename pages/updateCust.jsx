@@ -23,7 +23,7 @@ const mtnone = ({ users }) => {
         event.preventDefault()
 
         let count = 0
-        let nName, nEmail, nPhone, nPwd, nRole
+        let nName, nEmail, nPhone, nPwd
         const name = event.target.name.value
         const email = event.target.email.value
         const phone = event.target.phone.value
@@ -65,7 +65,6 @@ const mtnone = ({ users }) => {
                 setShow(true)
             }
         }
-
     }
 
     const cancel = (event) => {

@@ -1,4 +1,12 @@
 {
+  "financial": [
+    {
+      "month": "2021-04",
+      "sales": 0,
+      "revenue": 0,
+      "profit": 0
+    }
+  ],
   "users": [
     {
       "name": "du",
@@ -67,6 +75,16 @@
       "numberofpeople": "1",
       "personId": "NB_041p",
       "id": 14
+    },
+    {
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-05-12",
+      "time": "14",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "NB_041p",
+      "id": 15
     }
   ],
   "dishes": [
@@ -79,12 +97,20 @@
       "id": 4
     },
     {
-      "name": "pizza",
-      "category": "Entree",
-      "desc": "yeet",
-      "price": "20.00",
+      "name": "ice",
+      "category": null,
+      "desc": "chur",
+      "price": "5",
       "photoName": "Choose File",
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "nosire",
+      "category": "Entree",
+      "desc": "s",
+      "price": 33,
+      "photoName": "Choose File",
+      "id": 7
     }
   ]
 }
