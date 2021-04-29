@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styles from '../styles/register.module.css'
-const register = ({ users, code }) => {
+const register = ({ users, staff }) => {
     const [show, setShow] = useState(false)
     const router = useRouter()
 
@@ -10,20 +10,20 @@ const register = ({ users, code }) => {
         event.preventDefault()
 
         let cont = true
-        let staff = false
         const name = event.target.name.value
         const email = event.target.email.value
         const phone = event.target.phone.value
         const password = event.target.pwd.value
-        const passcode = event.target.psc.value
-
-
-
-        if (passcode == code)
-            staff = true
 
         for (const user of users) {
             if (user.email == email) {
+                setShow(true)
+                cont = false
+                break
+            }
+        }
+        for (const mem of staff) {
+            if (mem.email == email) {
                 setShow(true)
                 cont = false
                 break
@@ -38,8 +38,7 @@ const register = ({ users, code }) => {
                         name: name,
                         email: email,
                         phone: phone,
-                        password: password,
-                        staff: staff
+                        password: password
                     }),
                     headers: {
                         'Content-Type': 'application/json'
@@ -49,8 +48,7 @@ const register = ({ users, code }) => {
             if (res.status == 201) {
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
-                if (staff) router.push("/staffhome")
-                else router.push("/home")
+                router.push("/custhome")
             }
 
         }
@@ -79,10 +77,6 @@ const register = ({ users, code }) => {
                             <td><label htmlFor="pwd">Password:</label></td>
                             <td><input required type="password" id="pwd" name="pwd"></input></td>
                         </tr>
-                        <tr>
-                            <td><label htmlFor="psc">Passcode (for staff):</label></td>
-                            <td><input type="password" name="psc" id="psc" maxLength="4" /></td>
-                        </tr>
                     </tbody>
                 </table>
                 <input type="submit" value="Register" />
@@ -95,11 +89,10 @@ export async function getStaticProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
 
-    const resp = await fetch(`http://localhost:5000/passcode`)
-    const passcode = await resp.json()
-    const code = passcode[0].code
+    const resp = await fetch(`http://localhost:5000/staff`)
+    const staff = await resp.json()
     return {
-        props: { users, code },
+        props: { users, staff },
     }
 }
 

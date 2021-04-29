@@ -5,34 +5,40 @@
       "email": "hi@hi",
       "phone": "65789",
       "password": "hi",
-      "staff": false,
-      "id": "1"
-    },
+      "id": "zGhYts"
+    }
+  ],
+  "staff": [
     {
-      "name": "yo",
-      "email": "yo@yo",
-      "phone": "57897",
-      "password": "yo",
-      "staff": false,
-      "id": "2"
-    },
-    {
-      "name": "bh",
-      "email": "bh@bh",
+      "name": "admin",
+      "email": "admin@admin",
       "phone": "",
-      "password": "bh",
-      "staff": false,
-      "id": "txRC8Ji"
+      "role": "admin",
+      "password": "admin",
+      "id": "OmRDEe1"
     },
     {
-      "name": "hy",
-      "email": "hy@hy",
-      "phone": "",
-      "password": "hy",
-      "staff": false,
-      "id": "XYQTqaz"
+      "name": "gn",
+      "email": "gn@gn",
+      "phone": "456",
+      "role": "chef",
+      "password": "gn",
+      "id": "t94IlvS"
+    }
+  ],
+  "bookings": [
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-09",
+      "time": "14:00",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 1
     },
     {
+<<<<<<< HEAD
       "name": "bo",
       "email": "bo@bo",
       "phone": "76",
@@ -58,11 +64,54 @@
       "staff": true,
       "role": "manager",
       "id": "Kk1WseD"
+=======
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-14",
+      "time": "14:00",
+      "table": "table 4",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 2
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "15",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 3
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
+      "date": "2021-05-15",
+      "time": "14",
+      "table": "table 4",
+      "numberofpeople": "2",
+      "personId": "zGhYts",
+      "id": 4
+>>>>>>> master
     }
   ],
-  "passcode": [
+  "dishes": [
     {
-      "code": "1234"
+      "name": "gh",
+      "category": "Main",
+      "desc": "bhbhh",
+      "price": "20",
+      "photoName": "ERD.png",
+      "id": 4
+    },
+    {
+      "name": "pizza",
+      "category": "Entree",
+      "desc": "yeet",
+      "price": "20.00",
+      "photoName": "Choose File",
+      "id": 5
     }
   ]
 }

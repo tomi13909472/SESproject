@@ -1,0 +1,27 @@
+.cbtn{
+  background-color: grey;
+  border-radius: 5px;
+  color:white;  
+  font-weight: bold;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 950px;
+}
+.cbtn:hover{
+  color: rgba(0, 0, 0, 0.959);
+}
+.cnav{
+    background-color: #2ecc71;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-color: black;
+}
+.cnav a{
+  color: white;
+  padding-left: 20px;
+  font-weight: bold;
+}
+.cnav a:hover{
+  color: rgba(0, 0, 0, 0.575);
+}

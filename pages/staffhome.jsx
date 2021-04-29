@@ -1,22 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Navi from '../components/Staffnav'
-
-const Staffhome = ({ users }) => {
+import styles from '../styles/staffhome.module.css'
+const Staffhome = ({ staff }) => {
     const [name, setName] = useState()
-    const [email, setEmail] = useState()
+
     useEffect(() => {
         setName(sessionStorage.getItem("name"))
-        setEmail(sessionStorage.getItem("email"))
-        for (const user of users){
-            if (user.email == email){
-                sessionStorage.setItem("id", user.id)
-            }
-        }
     })
 
     return (
-        <div>
+        <div className={styles.Staffhome}>
             <Navi></Navi>
             <h1>Welcome</h1>
             <p>{name}</p>
@@ -25,10 +19,10 @@ const Staffhome = ({ users }) => {
 }
 
 export async function getStaticProps() {
-    const res = await fetch(`http://localhost:5000/users`)
-    const users = await res.json()
+    const res = await fetch(`http://localhost:5000/staff`)
+    const staff = await res.json()
     return {
-        props: { users },
+        props: { staff },
     }
 }
 

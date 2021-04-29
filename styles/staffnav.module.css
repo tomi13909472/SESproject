@@ -1,0 +1,30 @@
+.sbtnClass{
+    background-color: grey;
+    border-radius: 5px;
+    color:white;  
+    font-weight: bold;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 800px;
+
+
+  }
+.sbtnClass:hover{
+    color: rgba(0, 0, 0, 0.959);
+}
+.snav a{
+    color: white;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.snav a:hover{
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.snav{
+    background-color: #2ecc71;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-color: black;
+}
