@@ -1,14 +1,12 @@
 .sbtnClass{
     background-color: grey;
-    border-radius: 5px;
     color:white;  
     font-weight: bold;
     padding: 10px 16px;
     cursor: pointer;
     text-align: center;
-    margin-left: 800px;
-
-
+    float: right;
+    height: 50px;
   }
 .sbtnClass:hover{
     color: rgba(0, 0, 0, 0.959);
@@ -22,9 +20,14 @@
     color: rgba(0, 0, 0, 0.575);
 }
 
-.snav{
+.snav {
     background-color: #2ecc71;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 0;
     border-color: black;
+}
+
+.lk {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

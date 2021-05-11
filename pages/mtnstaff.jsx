@@ -74,23 +74,23 @@ const mtnstaff = ({ staff }) => {
                             <table className={styles.addmembertable}>
                                 <tbody>
                                     <tr>
-                                        <td><label htmlFor="name">Name:</label></td>
-                                        <td><input type="text" name="name" id="name" /></td>
+                                        <td><label htmlFor="name">Name</label></td>
+                                        <td><input type="text" name="name" id="name" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="email">Email:</label></td>
-                                        <td><input type="email" id="email" name="email" /></td>
+                                        <td><label htmlFor="email">Email</label></td>
+                                        <td><input type="email" id="email" name="email" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="phone">Phone:</label></td>
-                                        <td><input type="tel" id="phone" name="phone" /></td>
+                                        <td><label htmlFor="phone">Phone</label></td>
+                                        <td><input type="tel" id="phone" name="phone" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="role">Role:</label></td>
-                                        <td><input type="text" id="role" name="role" /></td>
+                                        <td><label htmlFor="role">Role</label></td>
+                                        <td><input type="text" id="role" name="role" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="password">Password:</label></td>
+                                        <td><label htmlFor="password">Password</label></td>
                                         <td><input type="password" id="password" name="password" /></td>
                                     </tr>
                                 </tbody>

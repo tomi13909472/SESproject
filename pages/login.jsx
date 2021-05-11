@@ -59,12 +59,12 @@ const login = ({ users, staff }) => {
                     <table>
                         <tbody>
                             <tr>
-                                <td><label htmlFor="email">Email:</label></td>
-                                <td><input required type="email" name="email" id="email"/><div className={styles.hideE}>Enter your email.</div></td>
+                                <td><label htmlFor="email">Email</label></td>
+                                <td><input required type="email" name="email" id="email"/></td>
                             </tr>
                             <tr>
-                            <td><label htmlFor="pwd">Password:</label></td>
-                                <td><input required type="password" name="pwd" id="pwd"/><div className={styles.hideP}>Enter your password.</div></td>
+                            <td><label htmlFor="pwd">Password</label></td>
+                                <td><input required type="password" name="pwd" id="pwd"/></td>
                             </tr>
                         </tbody>
                     </table>

@@ -63,19 +63,19 @@ const register = ({ users, staff }) => {
                 <table>
                     <tbody>
                         <tr>
-                            <td><label htmlFor="name">Name:</label></td>
+                            <td><label htmlFor="name">Name</label></td>
                             <td><input required type="text" name="name" id="name"/></td>
                         </tr>
                         <tr>
-                            <td><label htmlFor="email">Email:</label></td>
+                            <td><label htmlFor="email">Email</label></td>
                             <td><input required type="email" id="email" name="email"></input></td>
                         </tr>
                         <tr>
-                            <td><label htmlFor="phone">Phone:</label></td>
+                            <td><label htmlFor="phone">Phone</label></td>
                             <td><input required type="tel" name="phone" id="phone"/></td>
                         </tr>
                         <tr>
-                            <td><label htmlFor="pwd">Password:</label></td>
+                            <td><label htmlFor="pwd">Password</label></td>
                             <td><input required type="password" id="pwd" name="pwd"></input></td>
                         </tr>
                     </tbody>
