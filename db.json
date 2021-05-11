@@ -70,20 +70,52 @@
   ],
   "dishes": [
     {
-      "name": "gh",
+      "name": "Fried Noodles",
       "category": "Main",
-      "desc": "bhbhh",
-      "price": "20",
-      "photoName": "ERD.png",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "25.00",
+      "photoName": "noodles.jpg",
       "id": 4
     },
     {
       "name": "pizza",
       "category": "Entree",
-      "desc": "yeet",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
       "price": "20.00",
-      "photoName": "Choose File",
+      "photoName": "p1.jpg",
       "id": 5
+    },
+    {
+      "name": "Burger",
+      "category": "Entree",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "15.00",
+      "photoName": "burger.jpg",
+      "id": 6
+    },
+    {
+      "name": "Choco Lava Cake",
+      "category": "Dessert",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "10",
+      "photoName": "c3.jpg",
+      "id": 7
+    },
+    {
+      "name": "Salad",
+      "category": "Side",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "10",
+      "photoName": "s1.jpg",
+      "id": 8
+    },
+    {
+      "name": "Fried Rice",
+      "category": "Main",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "22",
+      "photoName": "Vegetable-Fried-Rice-2-3.jpg",
+      "id": 9
     }
   ]
 }

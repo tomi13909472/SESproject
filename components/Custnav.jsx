@@ -20,6 +20,7 @@ const Nav = () => {
             <Link href="/custhome"><a>Home</a></Link>
             <Link href="/booktable"><a>Book Table</a></Link>
             <Link href="/viewbookings"><a>View Bookings</a></Link>
+            <Link href="/menu"><a>Menu</a></Link>
             <button className={styles.cbtn} onClick={logout}>Logout</button>
         </nav>
     )

@@ -165,7 +165,7 @@ const mtnmenu = ({ dishes }) => {
                         <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
                             <td>{dish.name}</td>
                             <td>{dish.category}</td><td>{dish.desc}</td>
-                            <td>{dish.price}</td>
+                            <td>${dish.price}</td>
                             <td><button onClick={() => manage(dish.id)}>Manage</button></td></tr>
                     ))}
                 </tbody>
@@ -180,7 +180,7 @@ const mtnmenu = ({ dishes }) => {
                         <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
                             <td>{dish.name}</td>
                             <td>{dish.category}</td><td>{dish.desc}</td>
-                            <td>{dish.price}</td>
+                            <td>${dish.price}</td>
                             <td><button onClick={() => manage(dish.id)}>Manage</button></td></tr>
                     ))}
                 </tbody>
