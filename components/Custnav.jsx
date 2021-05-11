@@ -17,12 +17,11 @@ const Nav = () => {
 
     return (
         <nav className={styles.cnav}>
-            <div className={styles.lk}>
-                <Link href="/custhome"><a>Home</a></Link>
-                <Link href="/updateCust"><a>Profile</a></Link>
-                <Link href="/booktable"><a>Book Table</a></Link>
-                <Link href="/viewbookings"><a>Bookings</a></Link>
-            </div>
+            <Link href="/custhome"><a>Home</a></Link>
+            <Link href="/updateCust"><a>Update Details</a></Link>
+            <Link href="/booktable"><a>Book Table</a></Link>
+            <Link href="/viewbookings"><a>View Bookings</a></Link>
+            <Link href="/menu"><a>Menu</a></Link>
             <button className={styles.cbtn} onClick={logout}>Logout</button>
         </nav>
     )
