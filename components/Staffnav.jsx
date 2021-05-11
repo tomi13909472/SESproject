@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/staffnav.module.css'
+import classNames from 'classnames'
 const Nav = ({ staff }) => {    
     const router = useRouter()
     const[id, setId] = useState()
