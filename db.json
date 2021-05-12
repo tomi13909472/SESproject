@@ -115,6 +115,14 @@
       "id": 5
     },
     {
+      "name": "Salad",
+      "category": "Side",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "10",
+      "photoName": "s1.jpg",
+      "id": 8
+    },
+    {
       "name": "Burger",
       "category": "Entree",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
@@ -129,14 +137,6 @@
       "price": "10",
       "photoName": "c3.jpg",
       "id": 7
-    },
-    {
-      "name": "Salad",
-      "category": "Side",
-      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "10",
-      "photoName": "s1.jpg",
-      "id": 8
     },
     {
       "name": "Fried Rice",
