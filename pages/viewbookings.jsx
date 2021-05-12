@@ -107,7 +107,7 @@ const viewbookings = ({ bookingusers }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/bookings`)
     const bookingusers = await res.json()
     return {

@@ -121,7 +121,7 @@ const mtnstaff = ({ staff }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/staff`)
     const staff = await res.json()
     return {

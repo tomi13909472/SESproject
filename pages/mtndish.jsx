@@ -185,7 +185,7 @@ const mtndish = ({ dishes }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/dishes`)
     const dishes = await res.json()
     return {
