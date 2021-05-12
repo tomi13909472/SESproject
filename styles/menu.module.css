@@ -9,6 +9,15 @@
 .menupage h2{
     text-align: center;
 }
+
+.menupage h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.menupage h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
 /* .menuopt h3{
     display: inline-block;
 } */
@@ -30,39 +39,43 @@
     transition: 0.25s;
 } */
 .menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .singlemenu{
-    flex-basis: 580px;
-    margin-left: 10px;
-    margin-bottom: 40px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     padding-bottom: 40px;
     border-bottom: 1px solid #ddd;
 }
-.singlemenu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.singlemenu:hover img{
+
+.singlemenu img:hover{
     border-radius:0px;
+}
+.imgcent {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 .singlemenu img{
     border-radius: 50%;
-    margin: auto;
-    width: fit-content;
-    border: 1px solid #ddd;
+    float: left;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    width: auto;
+    border: 1px solid grey;
     padding:3px;
     transition: 0.5s;
 }
 .singlemenu h3{
     text-transform: capitalize;
     font-size: 22px;
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px dashed grey;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
@@ -73,8 +86,17 @@
 
 }
 .menucontent{
-    margin-left: 10px;
+    display: inline-block;
+    width: 280px;
+    margin: 0;
 }
 .menucontent h5{
     color: #2ecc71;
+}
+
+.break {
+    margin-left: auto; 
+    margin-right: auto;
+    border: 1px solid grey;
+    width: 80vw;
 }

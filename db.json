@@ -1,18 +1,20 @@
 {
+  "financial": [
+    {
+      "month": "2021-04",
+      "sales": 0,
+      "revenue": 0,
+      "profit": 0
+    }
+  ],
   "users": [
     {
-      "name": "hi",
-      "email": "hi@hi",
-      "phone": "65789",
-      "password": "hi",
-      "id": "zGhYts"
-    },
-    {
-      "name": "Sujith",
-      "email": "sujith@gmail.com",
-      "phone": "456895",
-      "password": "meenu",
-      "id": "P5rEGT-"
+      "name": "du",
+      "email": "du@du",
+      "phone": "577",
+      "loyalty": 1,
+      "password": "du",
+      "id": "NB_041p"
     }
   ],
   "staff": [
@@ -37,52 +39,72 @@
     {
       "name": "hi",
       "email": "hi@hi",
+      "date": "2021-05-08",
+      "time": "13",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "zGhYts",
+      "id": 11
+    },
+    {
+      "name": "hi",
+      "email": "hi@hi",
       "date": "2021-05-09",
-      "time": "14:00",
+      "time": "18",
       "table": "table 3",
-      "numberofpeople": "3",
+      "numberofpeople": "6",
       "personId": "zGhYts",
-      "id": 1
-    },
-    {
-      "name": "hi",
-      "email": "hi@hi",
-      "date": "2021-05-14",
-      "time": "14:00",
-      "table": "table 4",
-      "numberofpeople": "3",
-      "personId": "zGhYts",
-      "id": 2
+      "id": 12
     },
     {
       "name": "hi",
       "email": "hi@hi",
       "date": "2021-05-15",
-      "time": "15",
-      "table": "table 3",
-      "numberofpeople": "3",
-      "personId": "zGhYts",
-      "id": 3
-    },
-    {
-      "name": "hi",
-      "email": "hi@hi",
-      "date": "2021-05-15",
-      "time": "14",
-      "table": "table 4",
+      "time": "20",
+      "table": "table 2",
       "numberofpeople": "2",
       "personId": "zGhYts",
-      "id": 4
+      "id": 13
     },
     {
-      "name": "Sujith",
-      "email": "sujith@gmail.com",
-      "date": "2021-05-02",
-      "time": "16",
-      "table": "table 5",
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-04-10",
+      "time": "14",
+      "table": "table 3",
+      "numberofpeople": "1",
+      "personId": "NB_041p",
+      "id": 14
+    },
+    {
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-05-12",
+      "time": "14",
+      "table": "table 3",
       "numberofpeople": "3",
-      "personId": "P5rEGT-",
-      "id": 5
+      "personId": "NB_041p",
+      "id": 15
+    },
+    {
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-05-26",
+      "time": "13",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "NB_041p",
+      "id": 16
+    },
+    {
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-05-27",
+      "time": "13",
+      "table": "table 3",
+      "numberofpeople": "2",
+      "personId": "NB_041p",
+      "id": 17
     }
   ],
   "dishes": [
@@ -90,15 +112,15 @@
       "name": "Fried Noodles",
       "category": "Main",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "25.00",
+      "price": "25",
       "photoName": "noodles.jpg",
       "id": 4
     },
     {
-      "name": "pizza",
+      "name": "Margherita",
       "category": "Entree",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "20.00",
+      "price": "20",
       "photoName": "p1.jpg",
       "id": 5
     },
@@ -106,7 +128,7 @@
       "name": "Burger",
       "category": "Entree",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "15.00",
+      "price": "15",
       "photoName": "burger.jpg",
       "id": 6
     },

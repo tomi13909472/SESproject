@@ -1,31 +1,26 @@
-import Link from 'next/link'
-import { useEffect } from 'react'
-import Image from 'next/image'
+import router from 'next/router'
 import styles from '../styles/homepage.module.css'
-export default function Home({ users }) {
+export default function Home() {
+
+  function loginClick() {
+    router.push('/login');
+  }
+
+  function registerClick() {
+    router.push('/register');
+  }
+
   return (
     <div className={styles.homepage}>
-       <Image
-        src="/background.png"
-        width={2000}
-        height={700}
-      />
-        <div className={styles.home}>
-          <Link href='/register'><a>Register</a></Link>
-          <Link href='/login'><a>Login</a></Link>
-          {/* <ul>{users.map((user) => (
-            <li key={user.email}>{user.email}</li>
-          ))}</ul> */}
-        </div>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+      <div className={styles.box}>
+        <h1 className={styles.le}>Le Bistrot d'Andre</h1>
+        <button className={styles.but} onClick={registerClick}>Register</button>
+        <br />
+        <button className={styles.but} onClick={loginClick}>Login</button>
+        {/* <img className={styles.back} src="background.png"></img> */}
       </div>
+    </div>
   )
-}
-
-
-export async function getStaticProps(){
-  const res = await fetch(`http://localhost:5000/users`)
-  const users = await res.json()
-  return {
-      props:{ users },
-  }
 }

@@ -7,7 +7,8 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 15);
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .previousbooking thead tr{
     background-color: #009879;
@@ -57,7 +58,8 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 15);
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .currentbooking thead tr{
     background-color: #009879;
@@ -99,18 +101,15 @@
     background-color:#dddddd;
     left:50%;
     top: 50%;
-    margin-top:-35px;
-    margin-left: -100px;
+    margin-top:-50px;
+    margin-left: -200px;
 }
 .popuptextvb p{
     text-align: center;
-    color: red;
+    color: black;
     font-weight: bold;
 }
-.popuptextvb button{
-    margin-left: 100px;
-    padding-left: 10px;
-}
+
 .popuptextvb button:hover{
     background-color: #2ecc71;
 }
@@ -127,4 +126,16 @@
     border-radius:24px;
     transition: 0.25s;
     cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.bookings h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.bookings h2 {
+    font-family: 'Dancing Script', cursive;
 }

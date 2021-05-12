@@ -64,33 +64,34 @@ const mtnstaff = ({ staff }) => {
     return (
         <div className={styles.mtn}>
             <Navi></Navi>
-            <h1>Maintain staff</h1>
+            <div  className={styles.center}>
+            <h1>Maintain Staff</h1>
             <button  className={styles.mtnb} onClick={add}>Add Member</button>
             {addShow ?  //add new user pop up
                 <div>
                     <div className={styles.addmember}>
-                        <h2>Add Member</h2>
+                        <h1>Add Member</h1>
                         <form onSubmit={addConf}>
                             <table className={styles.addmembertable}>
                                 <tbody>
                                     <tr>
-                                        <td><label htmlFor="name">Name:</label></td>
-                                        <td><input type="text" name="name" id="name" /></td>
+                                        <td><label htmlFor="name">Name</label></td>
+                                        <td><input type="text" name="name" id="name" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="email">Email:</label></td>
-                                        <td><input type="email" id="email" name="email" /></td>
+                                        <td><label htmlFor="email">Email</label></td>
+                                        <td><input type="email" id="email" name="email" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="phone">Phone:</label></td>
-                                        <td><input type="tel" id="phone" name="phone" /></td>
+                                        <td><label htmlFor="phone">Phone</label></td>
+                                        <td><input type="tel" id="phone" name="phone" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="role">Role:</label></td>
-                                        <td><input type="text" id="role" name="role" /></td>
+                                        <td><label htmlFor="role">Role</label></td>
+                                        <td><input type="text" id="role" name="role" required/></td>
                                     </tr>
                                     <tr>
-                                        <td><label htmlFor="password">Password:</label></td>
+                                        <td><label htmlFor="password">Password</label></td>
                                         <td><input type="password" id="password" name="password" /></td>
                                     </tr>
                                 </tbody>
@@ -116,10 +117,11 @@ const mtnstaff = ({ staff }) => {
                 </tbody>
             </table>
         </div>
+        </div>
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/staff`)
     const staff = await res.json()
     return {

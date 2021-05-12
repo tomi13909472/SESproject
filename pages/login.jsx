@@ -55,16 +55,18 @@ const login = ({ users, staff }) => {
             <div className={styles.Login}>
                 {show ? <p>Incorrect credentials or account does not exist</p> : null}
                 <form className={styles.loginbox} onSubmit={check}>
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
                     <h1>Login</h1>
                     <table>
                         <tbody>
                             <tr>
-                                <td><label htmlFor="email">Email:</label></td>
-                                <td><input required type="email" name="email" id="email"/><div className={styles.hideE}>Enter your email.</div></td>
+                                <td><label htmlFor="email">Email</label></td>
+                                <td><input required type="email" name="email" id="email"/></td>
                             </tr>
                             <tr>
-                            <td><label htmlFor="pwd">Password:</label></td>
-                                <td><input required type="password" name="pwd" id="pwd"/><div className={styles.hideP}>Enter your password.</div></td>
+                            <td><label htmlFor="pwd">Password</label></td>
+                                <td><input required type="password" name="pwd" id="pwd"/></td>
                             </tr>
                         </tbody>
                     </table>
@@ -74,7 +76,7 @@ const login = ({ users, staff }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
 

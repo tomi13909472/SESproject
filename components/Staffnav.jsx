@@ -2,10 +2,9 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/staffnav.module.css'
-import classNames from 'classnames'
-const Nav = ({ staff }) => {    
+const Nav = () => {
     const router = useRouter()
-    const[id, setId] = useState()
+    const [id, setId] = useState()
 
     useEffect(() => {
         setId(sessionStorage.getItem("id"))
@@ -19,22 +18,18 @@ const Nav = ({ staff }) => {
 
     return (
         <nav className={styles.snav}>
-            <Link href="/staffhome"><a>Home</a></Link>
-            <Link href="/mtnstaff"><a>Maintain staff</a></Link>
-            <Link href="/mtnmenu"><a>Manage menu</a></Link>
-            <Link href='/staffviewbook'><a>View Bookings</a></Link>
+            <div className={styles.lk}>
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+                <h1>Le</h1>
+                <Link href="/staffhome"><a>Home</a></Link>
+                <Link href="/mtnstaff"><a>Staff</a></Link>
+                <Link href="/mtnmenu"><a>Menu</a></Link>
+                <Link href='/staffviewbook'><a>Bookings</a></Link>
+            </div>
             <button className={styles.sbtnClass} onClick={logout}>Logout</button>
         </nav>
     )
-}
-
-export async function getStaticProps() {
-
-    const resp = await fetch(`http://localhost:5000/staff`)
-    const staff = await resp.json()
-    return {
-        props: { staff },
-    }
 }
 
 export default Nav

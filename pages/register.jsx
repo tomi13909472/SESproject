@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styles from '../styles/register.module.css'
+// import { toast } from 'react-toastify'
+// import 'react-toastify/dist/ReactToastify.css'
 const register = ({ users, staff }) => {
     const [show, setShow] = useState(false)
     const router = useRouter()
@@ -38,6 +40,7 @@ const register = ({ users, staff }) => {
                         name: name,
                         email: email,
                         phone: phone,
+                        loyalty: 0,
                         password: password
                     }),
                     headers: {
@@ -48,6 +51,7 @@ const register = ({ users, staff }) => {
             if (res.status == 201) {
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
+                // toast.success('Registration Successful!', { position: toast.POSITION.TOP_CENTER })
                 router.push("/custhome")
             }
 
@@ -58,23 +62,25 @@ const register = ({ users, staff }) => {
         <div className={styles.register}>
             {show ? <p>Account already exists</p> : null}
             <form className={styles.registerform} onSubmit={onSubmit}>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
             <h1>Registration</h1>
                 <table>
                     <tbody>
                         <tr>
-                            <td><label htmlFor="name">Name:</label></td>
+                            <td><label htmlFor="name">Name</label></td>
                             <td><input required type="text" name="name" id="name"/></td>
                         </tr>
                         <tr>
-                            <td><label htmlFor="email">Email:</label></td>
+                            <td><label htmlFor="email">Email</label></td>
                             <td><input required type="email" id="email" name="email"></input></td>
                         </tr>
                         <tr>
-                            <td><label htmlFor="phone">Phone:</label></td>
+                            <td><label htmlFor="phone">Phone</label></td>
                             <td><input required type="tel" name="phone" id="phone"/></td>
                         </tr>
                         <tr>
-                            <td><label htmlFor="pwd">Password:</label></td>
+                            <td><label htmlFor="pwd">Password</label></td>
                             <td><input required type="password" id="pwd" name="pwd"></input></td>
                         </tr>
                     </tbody>
@@ -85,7 +91,7 @@ const register = ({ users, staff }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
 
