@@ -59,6 +59,8 @@ const register = ({ users, staff }) => {
         <div className={styles.register}>
             {show ? <p>Account already exists</p> : null}
             <form className={styles.registerform} onSubmit={onSubmit}>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
             <h1>Registration</h1>
                 <table>
                     <tbody>

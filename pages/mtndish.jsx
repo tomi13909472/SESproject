@@ -33,12 +33,12 @@ const mtndish = ({ dishes }) => {
 
     const uploadFile = async () => {
         const formData = new FormData()
-            formData.append('photo', file)
-            const resp = await axios.post('/api/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            })
+        formData.append('photo', file)
+        const resp = await axios.post('/api/upload', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
     }
 
     const update = async (event) => {
@@ -60,7 +60,7 @@ const mtndish = ({ dishes }) => {
         else nDesc = desc
         if (price == "") { nPrice = dish.price; count++ }
         else nPrice = price
-        if (filename == "") {nPhoto = dish.photoName; count++}
+        if (filename == "") { nPhoto = dish.photoName; count++ }
         else nPhoto = filename
 
         if (count == 5) {
@@ -112,7 +112,7 @@ const mtndish = ({ dishes }) => {
                 method: 'DELETE'
             }
         )
-        if (res.status == 200){
+        if (res.status == 200) {
             sessionStorage.removeItem("dishID")
             router.push('/mtnmenu')
         }
@@ -128,57 +128,59 @@ const mtndish = ({ dishes }) => {
     return (
         <div className={styles.mtnd}>
             <Navi></Navi>
-            <h1>Maintain dish</h1>
-            {show ? <p>Something went wrong or no values were entered</p> : null}
-            {confirm ?  //Warning for deleting dish
-                <div>
-                    <div className={styles.popupdish} >
-                        <div className={styles.popupdishtext} style={{ textAlign: "center" }}>
-                            <p>Are you sure you want to delete this dish?</p>
-                            <button onClick={yesDel}>Yes</button>
-                            <button onClick={noDel}>No</button>
+            <div className={styles.center}>
+                <h1>Maintain dish</h1>
+                {show ? <p>Something went wrong or no values were entered</p> : null}
+                {confirm ?  //Warning for deleting dish
+                    <div>
+                        <div className={styles.popupdish} >
+                            <div className={styles.popupdishtext} style={{ textAlign: "center" }}>
+                                <p>Are you sure you want to delete this dish?</p>
+                                <button onClick={yesDel}>Yes</button>
+                                <button onClick={noDel}>No</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                : null}
-            {dish ?
-                <form className={styles.mtndishform} onSubmit={update}>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><label htmlFor="name">Name:</label></td>
-                                <td><input type="text" name="name" id="name" placeholder={dish.name} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="cat">Category:</label></td>
-                                <td><input type="text" list="cats" id="cat" name="cat" placeholder={dish.category} />
-                                    <datalist id="cats">
-                                        <option value="Entree"></option>
-                                        <option value="Main"></option>
-                                        <option value="Desert"></option>
-                                        <option value="Side"></option>
-                                    </datalist>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="desc">Description:</label></td>
-                                <td><textarea name="desc" cols="22" rows="5" placeholder={dish.desc} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="price">Price:</label></td>
-                                <td><input type="number" id="price" name="price" min="0" placeholder={dish.price} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="photo">Picture:</label></td>
-                                <td><input type="file" name="photo" id="photo" onChange={onChange} /></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <input type="submit" value="Update" />
-                    <button onClick={del}>Delete</button>
-                    <button onClick={cancel}>Cancel</button>
-                </form>
-                : <p>Dish not found</p>}
+                    : null}
+                {dish ?
+                    <form className={styles.mtndishform} onSubmit={update}>
+                        <table className={styles.dishtable}>
+                            <tbody>
+                                <tr>
+                                    <td><label htmlFor="name">Name</label></td>
+                                    <td><input type="text" name="name" id="name" placeholder={dish.name} /></td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="cat">Category</label></td>
+                                    <td><input type="text" list="cats" id="cat" name="cat" placeholder={dish.category} />
+                                        <datalist id="cats">
+                                            <option value="Entree"></option>
+                                            <option value="Main"></option>
+                                            <option value="Desert"></option>
+                                            <option value="Side"></option>
+                                        </datalist>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="desc">Description</label></td>
+                                    <td><textarea name="desc" cols="22" rows="5" placeholder={dish.desc} /></td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="price">Price</label></td>
+                                    <td><input type="number" id="price" name="price" min="0" placeholder={dish.price} /></td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="photo">Picture</label></td>
+                                    <td><input type="file" name="photo" id="photo" onChange={onChange} /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" value="Update" />
+                        <button onClick={del}>Delete</button>
+                        <button onClick={cancel}>Cancel</button>
+                    </form>
+                    : <p>Dish not found</p>}
+            </div>
         </div>
     )
 }

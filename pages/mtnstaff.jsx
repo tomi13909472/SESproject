@@ -64,12 +64,13 @@ const mtnstaff = ({ staff }) => {
     return (
         <div className={styles.mtn}>
             <Navi></Navi>
-            <h1>Maintain staff</h1>
+            <div  className={styles.center}>
+            <h1>Maintain Staff</h1>
             <button  className={styles.mtnb} onClick={add}>Add Member</button>
             {addShow ?  //add new user pop up
                 <div>
                     <div className={styles.addmember}>
-                        <h2>Add Member</h2>
+                        <h1>Add Member</h1>
                         <form onSubmit={addConf}>
                             <table className={styles.addmembertable}>
                                 <tbody>
@@ -115,6 +116,7 @@ const mtnstaff = ({ staff }) => {
                     ))}
                 </tbody>
             </table>
+        </div>
         </div>
     )
 }

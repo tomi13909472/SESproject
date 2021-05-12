@@ -85,6 +85,16 @@
       "numberofpeople": "3",
       "personId": "NB_041p",
       "id": 15
+    },
+    {
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-05-26",
+      "time": "13",
+      "table": "table 3",
+      "numberofpeople": "3",
+      "personId": "NB_041p",
+      "id": 16
     }
   ],
   "dishes": [
@@ -92,23 +102,15 @@
       "name": "Fried Noodles",
       "category": "Main",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "25.00",
+      "price": "25",
       "photoName": "noodles.jpg",
       "id": 4
     },
     {
-      "name": "ice",
-      "category": null,
-      "desc": "chur",
-      "price": "5",
-      "photoName": "Choose File",
-      "id": 6
-    },
-    {
-      "name": "nosire",
+      "name": "Margherita",
       "category": "Entree",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "20.00",
+      "price": "20",
       "photoName": "p1.jpg",
       "id": 5
     },
@@ -116,7 +118,7 @@
       "name": "Burger",
       "category": "Entree",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "15.00",
+      "price": "15",
       "photoName": "burger.jpg",
       "id": 6
     },

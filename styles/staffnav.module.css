@@ -1,29 +1,42 @@
 .sbtnClass{
     background-color: grey;
-    color:white;  
+    margin: 10px 10px;
+    color:white;
+    border-color: white;
+    padding: 10px;
+    border-radius: 15px;
     font-weight: bold;
-    padding: 10px 16px;
     cursor: pointer;
     text-align: center;
     float: right;
-    height: 50px;
-  }
+    height: 40px;
+}
+
 .sbtnClass:hover{
     color: rgba(0, 0, 0, 0.959);
 }
 .snav a{
     color: white;
-    padding-left: 20px;
+    padding-left: 15px;
     font-weight: bold;
 }
 .snav a:hover{
     color: rgba(0, 0, 0, 0.575);
 }
 
+.snav h1 {
+    display: inline-block;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-family: 'Dancing Script', cursive;
+}
+
 .snav {
     background-color: #2ecc71;
     padding: 0;
     border-color: black;
+    border-bottom: 3px solid grey;
 }
 
 .lk {

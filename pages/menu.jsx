@@ -1,10 +1,7 @@
 import React from 'react'
-import router from 'next/router'
 import { useEffect, useState } from 'react'
 import Navi from '../components/Custnav'
 import Image from 'next/image'
-import axios from 'axios'
-import Link from 'next/link'
 import styles from '../styles/menu.module.css'
 
 const menu = ({dishes}) => {
@@ -68,11 +65,12 @@ const menu = ({dishes}) => {
                 </select>
             </div> */}
             <h2>Entree</h2>
+            <div className={styles.break}/>
             {entreeDishes ? 
                 <div className={styles.menu}>
                     {entreeDishes.map((dish) =>(
                         <div key={dish.id} className={styles.singlemenu}>
-                            <Image src={getImage(dish)} width="auto" height="auto"/>
+                            <div className={styles.imgcent}><img src={getImage(dish)}/></div>
                             <div className={styles.menucontent}>
                                 <h3>{dish.name}<span>${dish.price}</span></h3>
                                 {/* <h5>{dish.category}</h5> */}
@@ -84,11 +82,12 @@ const menu = ({dishes}) => {
             :  null
             }
             <h2>Main</h2>
+            <div className={styles.break}/>
             {mainDishes ? 
                 <div className={styles.menu}>
                     {mainDishes.map((dish) =>(
                         <div key={dish.id} className={styles.singlemenu}>
-                            <Image src={getImage(dish)} width="150" height="auto"/>
+                            <div className={styles.imgcent}><img src={getImage(dish)}/></div>
                             <div className={styles.menucontent}>
                                 <h3>{dish.name}<span>${dish.price}</span></h3>
                                 {/* <h5>{dish.category}</h5> */}
@@ -100,11 +99,12 @@ const menu = ({dishes}) => {
             :  null
             }
             <h2>Desserts</h2>
+            <div className={styles.break}/>
             {dessertDishes ? 
                 <div className={styles.menu}>
                     {dessertDishes.map((dish) =>(
                         <div key={dish.id} className={styles.singlemenu}>
-                            <Image src={getImage(dish)} width="150" height="auto"/>
+                            <div className={styles.imgcent}><img src={getImage(dish)}/></div>
                             <div className={styles.menucontent}>
                                 <h3>{dish.name}<span>${dish.price}</span></h3>
                                 {/* <h5>{dish.category}</h5> */}
@@ -116,11 +116,12 @@ const menu = ({dishes}) => {
             :  null
             }
             <h2>Side</h2>
+            <div className={styles.break}/>
             {sideDishes ? 
                 <div className={styles.menu}>
                     {sideDishes.map((dish) =>(
                         <div key={dish.id} className={styles.singlemenu}>
-                            <Image src={getImage(dish)} width="150" height="auto"/>
+                            <div className={styles.imgcent}><img src={getImage(dish)}/></div>
                             <div className={styles.menucontent}>
                                 <h3>{dish.name}<span>${dish.price}</span></h3>
                                 {/* <h5>{dish.category}</h5> */}

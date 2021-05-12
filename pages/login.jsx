@@ -55,6 +55,8 @@ const login = ({ users, staff }) => {
             <div className={styles.Login}>
                 {show ? <p>Incorrect credentials or account does not exist</p> : null}
                 <form className={styles.loginbox} onSubmit={check}>
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
                     <h1>Login</h1>
                     <table>
                         <tbody>

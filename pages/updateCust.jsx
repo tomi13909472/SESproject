@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import router from 'next/router'
 import Navi from '../components/Custnav'
+import styles from '../styles/updateCust.module.css'
 const mtnone = ({ users }) => {
 
     const [mid, setId] = useState()
@@ -73,40 +74,42 @@ const mtnone = ({ users }) => {
     }
 
     return (
-        <div>
+        <div className={styles.update}>
             <Navi></Navi>
-            <h1>Update Details</h1>
-            {show ? <p>Something went wrong or no values were entered</p> : null}
-            {user ?
-                <form onSubmit={update}>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><label htmlFor="name">Name:</label></td>
-                                <td><input type="text" name="name" id="name" placeholder={user.name} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="email">Email:</label></td>
-                                <td><input type="email" id="email" name="email" placeholder={user.email} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="phone">Phone:</label></td>
-                                <td><input type="tel" name="phone" id="phone" placeholder={user.phone} /></td>
-                            </tr>
-                            <tr>
-                                <td><label htmlFor="pwd">Password:</label></td>
-                                <td><input type="password" id="pwd" name="pwd" placeholder={user.password} /></td>
-                            </tr>
-                            <tr>
-                                <td><p>Current Loyalty Discount:</p></td>
-                                <td><p>{user.loyalty + "%"}</p></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <input id="sub" type="submit" value="Update" />
-                    <button onClick={cancel}>Cancel</button>
-                </form>
-                : <p>Something went wrong</p>}
+            <div className={styles.center}>
+                <h1>Update Details</h1>
+                {show ? <p>Something went wrong or no values were entered</p> : null}
+                {user ?
+                    <form className={styles.updateForm} onSubmit={update}>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td className={styles.vert}><label htmlFor="name">Name</label></td>
+                                    <td><input type="text" name="name" id="name" placeholder={user.name} /></td>
+                                </tr>
+                                <tr>
+                                    <td className={styles.vert}><label htmlFor="email">Email</label></td>
+                                    <td><input type="email" id="email" name="email" placeholder={user.email} /></td>
+                                </tr>
+                                <tr>
+                                    <td className={styles.vert}><label htmlFor="phone">Phone</label></td>
+                                    <td><input type="tel" name="phone" id="phone" placeholder={user.phone} /></td>
+                                </tr>
+                                <tr>
+                                    <td className={styles.vert}><label htmlFor="pwd">Password</label></td>
+                                    <td><input type="password" id="pwd" name="pwd" placeholder={user.password} /></td>
+                                </tr>
+                                <tr>
+                                    <td className={styles.vert}><p>Loyalty Discount</p></td>
+                                    <td><p>{user.loyalty + "%"}</p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input id="sub" type="submit" value="Update" />
+                        <button onClick={cancel}>Cancel</button>
+                    </form>
+                    : <p>Something went wrong</p>}
+            </div>
         </div>
     )
 }

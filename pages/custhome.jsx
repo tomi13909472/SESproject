@@ -52,10 +52,17 @@ const Home = ({ users, bookings }) => {
     }
 
     return (
-        <div className={styles.CustHomepage}>
+        <div className={styles.Custhomepage}>
             <Navi></Navi>
-            <h1>Welcome</h1>
-            <p>{name}</p>
+            <h1 className={styles.le}>Welcome</h1>
+            <div className={styles.imgcent}>
+            <img className={styles.kit} src='/rest.jpg'></img>
+            </div>
+            <div className={styles.center}>
+                <p>Le Bistrot d'Andre is a exquisite French restaurant and we take much pride in our food that we serve.
+                    You will find your options as customer above at the top of the screen.
+                </p>
+            </div>
         </div>
     )
 }

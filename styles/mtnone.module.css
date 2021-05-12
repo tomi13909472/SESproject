@@ -13,12 +13,11 @@
 }
 .popuptext p{
     text-align: center;
-    color: red;
+    color: black;
     font-weight: bold;
 }
 .popuptext button{
-    margin-left: 100px;
-    padding-left: 10px;
+    
 }
 .popuptext button:hover{
     background-color: #2ecc71;
@@ -29,11 +28,17 @@
     padding: 40px;
     border-radius: 10px;
     border: 1px solid #2ecc71;
-    margin-left:10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .mtnone1 h1{
-    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
 }
+
+.center {
+    text-align: center;
+}
+
 .mtnoneform input[type="email"], .mtnoneform input[type="password"], .mtnoneform input[type="tel"], .mtnoneform input[type="text"]{
     border:0;
     background: none;

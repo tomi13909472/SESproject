@@ -11,9 +11,7 @@
   border: 1px solid #2ecc71;
 }
 .loginbox h1{
-  color:white;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-family: 'Dancing Script', cursive;
 }
 
 .loginbox input[type="email"], .loginbox input[type="password"]{
@@ -21,7 +19,7 @@
   background: none;
   display: block;
   margin: 20px auto;
-  text-align:center;
+  text-align: center;
   border:2px solid #3498db;
   padding: 14px 10px;
   width: 200px;
@@ -48,6 +46,7 @@
   transition: 0.25s;
   cursor: pointer;
 }
+
 .loginbox input[type="submit"]:hover{
   background: #2ecc71;
 }
@@ -66,6 +65,7 @@
   color: white;
   border-radius: 6px;
 }
+
 .loginbox label{
   color: white;
   padding-left: 14px;

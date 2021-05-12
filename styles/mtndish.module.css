@@ -13,27 +13,37 @@
 }
 .popupdishtext p{
     text-align: center;
-    color: red;
+    color: black;
     font-weight: bold;
 }
 .popupdishtext button{
-    margin-left: 100px;
-    padding-left: 10px;
+
 }
 .popupdishtext button:hover{
     background-color: #2ecc71;
 }
+
+.dishtable {
+    margin-left: auto;
+    margin-right: auto;
+}
 .mtndishform{
     background: #191919;
     width: 400px;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     border: 1px solid #2ecc71;
-    margin-left:10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .mtnd h1{
-    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
 }
+
+.center {
+    text-align: center;
+}
+
 .mtndishform textarea, .mtndishform input[type="number"], .mtndishform input[type="file"], .mtndishform input[type="text"]{
     border:0;
     background: none;
@@ -47,7 +57,7 @@
     color: white;
     border-radius: 24px;
     transition: 0.25s;
-    margin-bottom:1px;
+    margin-bottom: 0;
 }
 .mtndishform textarea:focus, .mtndishform input[type="number"]:focus, .mtndishform input[type="file"]:focus, .mtndishform input[type="text"]:focus{
     width:280px;
@@ -72,7 +82,10 @@
     background: #2ecc71;
 }
 .mtndishform label{
+    margin-top: 20px;
     color: white;
+    float: right;
+    padding-right: 5px;
 }
 .mtndishform button{
     border:0;

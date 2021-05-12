@@ -19,11 +19,13 @@ const Nav = () => {
     return (
         <nav className={styles.snav}>
             <div className={styles.lk}>
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+                <h1>Le</h1>
                 <Link href="/staffhome"><a>Home</a></Link>
                 <Link href="/mtnstaff"><a>Staff</a></Link>
                 <Link href="/mtnmenu"><a>Menu</a></Link>
                 <Link href='/staffviewbook'><a>Bookings</a></Link>
-                <Link href='/financials'><a>Financials</a></Link>
             </div>
             <button className={styles.sbtnClass} onClick={logout}>Logout</button>
         </nav>
