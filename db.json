@@ -6,6 +6,13 @@
       "phone": "65789",
       "password": "hi",
       "id": "zGhYts"
+    },
+    {
+      "name": "Sujith",
+      "email": "sujith@gmail.com",
+      "phone": "456895",
+      "password": "meenu",
+      "id": "P5rEGT-"
     }
   ],
   "staff": [
@@ -66,6 +73,16 @@
       "numberofpeople": "2",
       "personId": "zGhYts",
       "id": 4
+    },
+    {
+      "name": "Sujith",
+      "email": "sujith@gmail.com",
+      "date": "2021-05-02",
+      "time": "16",
+      "table": "table 5",
+      "numberofpeople": "3",
+      "personId": "P5rEGT-",
+      "id": 5
     }
   ],
   "dishes": [
