@@ -2,17 +2,16 @@ import { useEffect, useState } from 'react'
 import Navi from '../components/Custnav'
 import styles from '../styles/CustHome.module.css'
 const Home = ({ users, bookings }) => {
-    const [name, setName] = useState()
     const [once, setOnce] = useState(true)
     let today = new Date().toISOString().slice(0, 10)
     useEffect(() => {
         if (once == true) {
             let count = 0
             let user
-            setName(sessionStorage.getItem("name"))
             for (const cust of users) {
-                if (sessionStorage.getItem("id") == cust.id) {
+                if (sessionStorage.getItem("email") == cust.email) {
                     user = cust
+                    sessionStorage.setItem("id", cust.id)
                 }
             }
             console.log(today)
@@ -67,7 +66,7 @@ const Home = ({ users, bookings }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const resp = await fetch(`http://localhost:5000/users`)
     const users = await resp.json()
