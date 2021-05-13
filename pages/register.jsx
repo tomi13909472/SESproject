@@ -51,8 +51,8 @@ const register = ({ users, staff }) => {
             if (res.status == 201) {
                 sessionStorage.setItem("name", name)
                 sessionStorage.setItem("email", email)
-                // toast.success('Registration Successful!', { position: toast.POSITION.TOP_CENTER })
                 router.push("/custhome")
+                // toast.success('Registration Successful!', { position: toast.POSITION.TOP_CENTER })
             }
 
         }

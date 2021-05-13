@@ -11,8 +11,7 @@ const Home = ({ users, bookings }) => {
             for (const cust of users) {
                 if (sessionStorage.getItem("email") == cust.email) {
                     user = cust
-                    sessionStorage.setItem("id",cust.id)
-
+                    sessionStorage.setItem("id", cust.id)
                 }
             }
             console.log(today)
@@ -67,7 +66,7 @@ const Home = ({ users, bookings }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const resp = await fetch(`http://localhost:5000/users`)
     const users = await resp.json()

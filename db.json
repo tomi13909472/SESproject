@@ -11,10 +11,42 @@
     {
       "name": "du",
       "email": "du@du",
-      "phone": "577",
+      "phone": "678",
       "loyalty": 1,
       "password": "du",
       "id": "NB_041p"
+    },
+    {
+      "name": "gh",
+      "email": "gh@gh",
+      "phone": "432",
+      "loyalty": 0,
+      "password": "gh",
+      "id": "cRoHjYY"
+    },
+    {
+      "name": "bn",
+      "email": "bn@bn",
+      "phone": "21",
+      "loyalty": 0,
+      "password": "bn",
+      "id": "yZnO1Ar"
+    },
+    {
+      "name": "vb",
+      "email": "vb@vb",
+      "phone": "67",
+      "loyalty": 0,
+      "password": "vb",
+      "id": "5vgE3WT"
+    },
+    {
+      "name": "as",
+      "email": "as@as",
+      "phone": "12",
+      "loyalty": 0,
+      "password": "as",
+      "id": "BjVmdqU"
     }
   ],
   "staff": [
@@ -125,6 +157,14 @@
       "id": 5
     },
     {
+      "name": "Salad",
+      "category": "Side",
+      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
+      "price": "10",
+      "photoName": "s1.jpg",
+      "id": 8
+    },
+    {
       "name": "Burger",
       "category": "Entree",
       "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
@@ -139,14 +179,6 @@
       "price": "10",
       "photoName": "c3.jpg",
       "id": 7
-    },
-    {
-      "name": "Salad",
-      "category": "Side",
-      "desc": "Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.",
-      "price": "10",
-      "photoName": "s1.jpg",
-      "id": 8
     },
     {
       "name": "Fried Rice",

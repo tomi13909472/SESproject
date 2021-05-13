@@ -227,7 +227,7 @@ const mtnmenu = ({ dishes }) => {
                         </thead>
                         <tbody>
                             {catDishes.map((dish) => (
-                                <tr key={dish.id}><td><Image className={styles.menuimg} src={getImage(dish)} width="150" height="auto" /></td>
+                                <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
                                     <td>{dish.name}</td>
                                     <td>{dish.category}</td><td>{dish.desc}</td>
                                     <td>${dish.price}</td>
@@ -242,7 +242,7 @@ const mtnmenu = ({ dishes }) => {
                         </thead>
                         <tbody>
                             {dishes.map((dish) => (
-                                <tr key={dish.id}><td><img className={styles.menuimg} src={getImage(dish)}></img></td>
+                                <tr key={dish.id}><td><Image src={getImage(dish)} width="150" height="auto" /></td>
                                     <td>{dish.name}</td>
                                     <td>{dish.category}</td><td>{dish.desc}</td>
                                     <td>${dish.price}</td>

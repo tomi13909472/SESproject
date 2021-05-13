@@ -162,7 +162,7 @@ const booktable = ({ bookings }) => {
         </div>
     )
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/bookings`)
     const bookings = await res.json()
     return {
