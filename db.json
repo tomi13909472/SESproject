@@ -47,6 +47,30 @@
       "loyalty": 0,
       "password": "as",
       "id": "BjVmdqU"
+    },
+    {
+      "name": "haha",
+      "email": "hahah@haha",
+      "phone": "4578",
+      "loyalty": 0,
+      "password": "haha",
+      "id": "mRfW56y"
+    },
+    {
+      "name": "sam",
+      "email": "sam@gmail.com",
+      "phone": "14527",
+      "loyalty": 0,
+      "password": "sam",
+      "id": "zCgABkQ"
+    },
+    {
+      "name": "bill",
+      "email": "bill@bill",
+      "phone": "457",
+      "loyalty": 0,
+      "password": "bill",
+      "id": "H4hajO7"
     }
   ],
   "staff": [
@@ -132,11 +156,21 @@
       "name": "du",
       "email": "du@du",
       "date": "2021-05-27",
-      "time": "13",
+      "time": "15",
       "table": "table 3",
-      "numberofpeople": "2",
+      "numberofpeople": "4",
       "personId": "NB_041p",
-      "id": 17
+      "id": 18
+    },
+    {
+      "name": "gh",
+      "email": "gh@gh",
+      "date": "2021-05-28",
+      "time": "14",
+      "table": "table 2",
+      "numberofpeople": "3",
+      "personId": "cRoHjYY",
+      "id": 19
     }
   ],
   "dishes": [
