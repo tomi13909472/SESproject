@@ -33,7 +33,7 @@
 
 
 .registerform input[type="email"]:focus, .registerform input[type="password"]:focus, .registerform input[type="tel"]:focus, .registerform input[type="text"]:focus{
-  width:280px;
+  width:260px;
   border-color: #2ecc71;
 }
 .registerform input[type="submit"]:hover{
