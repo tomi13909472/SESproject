@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import styles from '../styles/Login.module.css'
+import styles from '../styles/login.module.css'
 const login = ({ users, staff }) => {
 
     const [show, setShow] = useState(false)
@@ -76,7 +76,7 @@ const login = ({ users, staff }) => {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
 

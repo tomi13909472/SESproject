@@ -149,7 +149,7 @@ const mtnmenu = ({ dishes }) => {
         )
         if (res.status == 201) {
             setAddShow(false)
-            router.push('/mtnmenu')
+            router.reload();
         }
 
     }
@@ -166,7 +166,7 @@ const mtnmenu = ({ dishes }) => {
                 <button className={styles.mtnmenub} onClick={add}>Add Dish</button>
                 <br />
                 <div className={styles.mtnmenuopt}>
-                    <p>Sort by category:</p>
+                    <p>Sort by category</p>
                     <select name="category" id="category" onChange={onCatChange}>
                         <option value="All">All</option>
                         <option value="Entree">Entree</option>
@@ -183,12 +183,12 @@ const mtnmenu = ({ dishes }) => {
                                 <table className={styles.adddishtable}>
                                     <tbody>
                                         <tr>
-                                            <td><label htmlFor="name">Name:</label></td>
+                                            <td><label htmlFor="name">Name</label></td>
                                             <td><input type="text" name="name" id="name" required /></td>
                                         </tr>
                                         {catWarn ? <tr><td></td><td><p style={{ margin: "0" }}>Must select a category</p></td></tr> : null}
                                         <tr>
-                                            <td><label htmlFor="cat">Category:</label></td>
+                                            <td><label htmlFor="cat">Category</label></td>
                                             <td><select name="cat" id="cat" onChange={onAddChange} required>
                                                 <option value="Select">Select</option>
                                                 <option value="Entree">Entree</option>
@@ -199,15 +199,15 @@ const mtnmenu = ({ dishes }) => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><label htmlFor="desc">Description:</label></td>
+                                            <td><label htmlFor="desc">Description</label></td>
                                             <td><textarea name="desc" cols="22" rows="5" required /></td>
                                         </tr>
                                         <tr>
-                                            <td><label htmlFor="price">Price:</label></td>
+                                            <td><label htmlFor="price">Price</label></td>
                                             <td><input type="number" id="price" name="price" min="0" step="1" required /></td>
                                         </tr>
                                         <tr>
-                                            <td><label htmlFor="photo">Picture:</label></td>
+                                            <td><label htmlFor="photo">Picture</label></td>
                                             <td><input type="file" name="photo" id="photo" onChange={onChange} /></td>
                                         </tr>
                                     </tbody>

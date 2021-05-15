@@ -3,11 +3,6 @@ import { useEffect, useState } from 'react'
 import Navi from '../components/Staffnav'
 import styles from '../styles/staffhome.module.css'
 const Staffhome = () => {
-    const [name, setName] = useState()
-
-    useEffect(() => {
-        setName(sessionStorage.getItem("name"))
-    })
 
     return (
         <div className={styles.Staffhome}>
