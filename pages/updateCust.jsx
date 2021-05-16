@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react'
 import router from 'next/router'
 import Navi from '../components/Custnav'
 import styles from '../styles/updateCust.module.css'
-const mtnone = ({ users }) => {
+const mtnone = ({ users, staff }) => {
 
     const [mid, setId] = useState()
     const [user, setUser] = useState()
     const [show, setShow] = useState(false)
+    const [warn, setWarn] = useState(false)
 
     useEffect(() => {
         if (!user) {
@@ -29,6 +30,21 @@ const mtnone = ({ users }) => {
         const email = event.target.email.value
         const phone = event.target.phone.value
         const pwd = event.target.pwd.value
+
+        if (email != "" && email != user.email){
+            for (const usr of users){
+                if (usr.email == email){
+                    setWarn(true)
+                    return
+                }
+            }
+            for (const mem of staff){
+                if (mem.email == email){
+                    setWarn(true)
+                    return
+                }
+            }
+        }
 
         if (name == "") { nName = user.name; count++ }
         else nName = name
@@ -60,6 +76,7 @@ const mtnone = ({ users }) => {
                 }
             )
             if (res.status == 200) {
+                sessionStorage.setItem('email', email)
                 router.push('/custhome')
             }
             else {
@@ -79,6 +96,7 @@ const mtnone = ({ users }) => {
             <div className={styles.center}>
                 <h1>Update Details</h1>
                 {show ? <p>Something went wrong or no values were entered</p> : null}
+                {warn ? <p>This email is taken</p> : null}
                 {user ?
                     <form className={styles.updateForm} onSubmit={update}>
                         <table>
@@ -117,8 +135,11 @@ const mtnone = ({ users }) => {
 export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
+
+    const resp = await fetch(`http://localhost:5000/staff`)
+    const staff = await resp.json()
     return {
-        props: { users },
+        props: { users, staff },
     }
 }
 
