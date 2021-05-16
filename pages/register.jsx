@@ -88,7 +88,7 @@ const register = ({ users, staff }) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/users`)
     const users = await res.json()
 
