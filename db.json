@@ -23,54 +23,6 @@
       "loyalty": 0,
       "password": "gh",
       "id": "cRoHjYY"
-    },
-    {
-      "name": "bn",
-      "email": "bn@bn",
-      "phone": "21",
-      "loyalty": 0,
-      "password": "bn",
-      "id": "yZnO1Ar"
-    },
-    {
-      "name": "vb",
-      "email": "vb@vb",
-      "phone": "67",
-      "loyalty": 0,
-      "password": "vb",
-      "id": "5vgE3WT"
-    },
-    {
-      "name": "as",
-      "email": "as@as",
-      "phone": "12",
-      "loyalty": 0,
-      "password": "as",
-      "id": "BjVmdqU"
-    },
-    {
-      "name": "haha",
-      "email": "hahah@haha",
-      "phone": "4578",
-      "loyalty": 0,
-      "password": "haha",
-      "id": "mRfW56y"
-    },
-    {
-      "name": "sam",
-      "email": "sam@gmail.com",
-      "phone": "14527",
-      "loyalty": 0,
-      "password": "sam",
-      "id": "zCgABkQ"
-    },
-    {
-      "name": "bill",
-      "email": "bill@bill",
-      "phone": "457",
-      "loyalty": 0,
-      "password": "bill",
-      "id": "H4hajO7"
     }
   ],
   "staff": [
@@ -163,14 +115,14 @@
       "id": 18
     },
     {
-      "name": "gh",
-      "email": "gh@gh",
-      "date": "2021-05-28",
-      "time": "14",
-      "table": "table 2",
-      "numberofpeople": "3",
-      "personId": "cRoHjYY",
-      "id": 19
+      "name": "du",
+      "email": "du@du",
+      "date": "2021-05-30",
+      "time": "13",
+      "table": "table 4",
+      "numberofpeople": "2",
+      "personId": "NB_041p",
+      "id": 20
     }
   ],
   "dishes": [

@@ -1,20 +1,28 @@
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Navi from '../components/Custnav'
 import styles from '../styles/CustHome.module.css'
 const Home = ({ users, bookings }) => {
     const [once, setOnce] = useState(true)
+    const [email, setEmail] = useState()
+    const router = useRouter()
     let today = new Date().toISOString().slice(0, 10)
     useEffect(() => {
-        if (once == true) {
+        setEmail(sessionStorage.getItem("email"))
+        if (email === null) {
+            router.push('/')
+            return
+        }
+        if (once == true && email != null) {
             let count = 0
             let user
+            console.log(sessionStorage.getItem("email"))
             for (const cust of users) {
                 if (sessionStorage.getItem("email") == cust.email) {
                     user = cust
                     sessionStorage.setItem("id", cust.id)
                 }
             }
-            console.log(today)
             for (const book of bookings) {
                 if (book.personId == user.id && book.date < today){
                     count++

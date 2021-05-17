@@ -1,14 +1,14 @@
-.adddish{
+.adddish {
         z-index:1;
         border: 2px solid #2ecc71;
         border-radius: 15px;
         width: 420px;
-        height: 520px;
+        height: 550px;
         position:absolute; 
         background-color: #191919;
         left: 50%;
         top: 50%;
-        margin: -260px -210px;
+        margin: -275px -210px;
 }
 
 .center {
