@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 const mtnstaff = ({ staff }) => {
 
     const [addShow, setAddShow] = useState(false)
+    const [warn, setWarn] = useState(false)
 
     function manage (id) {
         sessionStorage.setItem("mtnID", id)
@@ -30,9 +31,11 @@ const mtnstaff = ({ staff }) => {
         const role = event.target.role.value
         const password = event.target.password.value
         
-        for (const mem in staff){
-            if (email == mem.email)
+        for (const mem of staff){
+            if (email == mem.email){
                 cont = false
+                setWarn(true)
+            }
         }
 
         if (cont) {
@@ -71,6 +74,7 @@ const mtnstaff = ({ staff }) => {
                 <div>
                     <div className={styles.addmember}>
                         <h1>Add Member</h1>
+                        {warn ? <p>Email is taken</p> : null}
                         <form onSubmit={addConf}>
                             <table className={styles.addmembertable}>
                                 <tbody>
