@@ -138,23 +138,23 @@ const mtnone = ({ staff }) => {
                         <table>
                             <tbody>
                                 <tr>
-                                    <td><label htmlFor="name">Name:</label></td>
+                                    <td><label htmlFor="name">Name</label></td>
                                     <td><input type="text" name="name" id="name" placeholder={member.name} /></td>
                                 </tr>
                                 <tr>
-                                    <td><label htmlFor="email">Email:</label></td>
+                                    <td><label htmlFor="email">Email</label></td>
                                     <td><input type="email" id="email" name="email" placeholder={member.email} /></td>
                                 </tr>
                                 <tr>
-                                    <td><label htmlFor="phone">Phone:</label></td>
+                                    <td><label htmlFor="phone">Phone</label></td>
                                     <td><input type="tel" name="phone" id="phone" placeholder={member.phone} /></td>
                                 </tr>
                                 <tr>
-                                    <td><label htmlFor="role">Role:</label></td>
+                                    <td><label htmlFor="role">Role</label></td>
                                     <td><input type="text" name="role" id="role" placeholder={member.role} /></td>
                                 </tr>
                                 <tr>
-                                    <td><label htmlFor="pwd">Password:</label></td>
+                                    <td><label htmlFor="pwd">Password</label></td>
                                     <td><input type="password" id="pwd" name="pwd" placeholder={member.password} /></td>
                                 </tr>
                             </tbody>

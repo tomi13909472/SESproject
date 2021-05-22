@@ -11,7 +11,7 @@
     margin-right: auto;
 }
 .previousbooking thead tr{
-    background-color: #009879;
+    background-color: #2ecc71;
     color: white;
     text-align: left;
     font-weight: bold; 
@@ -29,7 +29,7 @@
     background-color: #dddddd;
 }
 .previousbooking tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #2ecc71;
 }
 .previousbooking tbody td{
     text-align: center;
@@ -62,7 +62,7 @@
     margin-right: auto;
 }
 .currentbooking thead tr{
-    background-color: #009879;
+    background-color: #2ecc71;
     color: white;
     text-align: left;
     font-weight: bold; 
@@ -80,7 +80,7 @@
     background-color: #dddddd;
 }
 .currentbooking tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #2ecc71;
 }
 .currentbooking tbody td{
     text-align: center;

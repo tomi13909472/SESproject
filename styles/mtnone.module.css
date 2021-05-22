@@ -70,7 +70,6 @@
     border-radius:24px;
     transition: 0.25s;
     cursor: pointer;
-    margin-left: 20px;
     margin-top: 20px;
 }
 .mtnoneform input[type="submit"]:hover{
@@ -78,6 +77,10 @@
 }
 .mtnoneform label{
     color: white;
+    float: right;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 20px;
 }
 .mtnoneform button{
     border:0;
@@ -85,7 +88,6 @@
     display: inline-block;
     text-align: center;
     border:2px solid #2ecc71;
-    margin-left: 35px;
     margin-top: 20px;
     padding:10px 20px;
     outline:none;

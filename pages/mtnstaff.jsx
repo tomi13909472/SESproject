@@ -2,7 +2,7 @@ import router from 'next/router'
 import Navi from '../components/Staffnav'
 import styles from '../styles/mtnstaff.module.css'
 import { useEffect, useState } from 'react'
-const mtnstaff = ({ staff }) => {
+const mtnstaff = ({ users, staff }) => {
 
     const [addShow, setAddShow] = useState(false)
     const [warn, setWarn] = useState(false)
@@ -33,6 +33,13 @@ const mtnstaff = ({ staff }) => {
         
         for (const mem of staff){
             if (email == mem.email){
+                cont = false
+                setWarn(true)
+            }
+        }
+
+        for (const user of users){
+            if (email == user.email){
                 cont = false
                 setWarn(true)
             }
@@ -128,8 +135,10 @@ const mtnstaff = ({ staff }) => {
 export async function getServerSideProps() {
     const res = await fetch(`http://localhost:5000/staff`)
     const staff = await res.json()
+    const resp = await fetch(`http://localhost:5000/users`)
+    const users = await resp.json()
     return {
-        props: { staff },
+        props: { users, staff },
     }
 }
 
