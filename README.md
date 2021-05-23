@@ -31,4 +31,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+## Specific requirements
+In order to run this application a next project must be created which contains all of the folders in this github + node_modules. Once this is done, then several installs must be done (npm install axios, formidable, path, toastify, json-server). In order to run the app, first open a terminal in the project directory and enter the command "npm run server". Then open another terminal in the same directory and enter "npm run dev". Now the website will run on localhost port 3000.
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
